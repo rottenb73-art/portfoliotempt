@@ -4,13 +4,10 @@ import Link from 'next/link';
 import type { Project } from '@/lib/projects';
 import { Carousel } from './Carousel';
 import { ScrollReveal } from './ScrollReveal';
-import { GlbViewer } from './GlbViewer';
 
 export function ProjectPageClient({ project, prev, next }: { project: Project; prev: Project | null; next: Project | null }) {
   const imageItems = project.media.filter((m) => m.type === 'image');
-  const glbItems = project.media.filter((m) => m.type === 'glb');
 
-  // Drag-scroll for horizontal strip
   const hScrollRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
   const startX = useRef(0);
@@ -33,7 +30,6 @@ export function ProjectPageClient({ project, prev, next }: { project: Project; p
 
       {/* ── HERO ── */}
       <div style={{ borderBottom: '1px solid var(--black)', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '50vh' }}>
-        {/* Left: title block */}
         <div style={{ padding: '4rem 3rem', borderRight: '1px solid var(--black)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
           <div>
             <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'var(--font-mono)', fontSize: '0.6rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gray-500)', textDecoration: 'none', marginBottom: '3rem', borderBottom: '1px solid var(--gray-100)', paddingBottom: '0.25rem' }}>
@@ -46,29 +42,24 @@ export function ProjectPageClient({ project, prev, next }: { project: Project; p
               {project.title}
             </h1>
             <p style={{ fontFamily: 'var(--font-mono)', fontWeight: 300, fontSize: '0.8rem', lineHeight: 1.9, color: 'var(--gray-700)', maxWidth: '380px' }}>
-              {project.description}
+              {project.shortDescription}
             </p>
           </div>
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '2rem' }}>
             {project.tags.map((t) => (
               <span key={t} style={{ fontFamily: 'var(--font-mono)', fontSize: '0.55rem', letterSpacing: '0.1em', textTransform: 'uppercase', border: '1px solid var(--black)', padding: '0.15rem 0.5rem' }}>{t}</span>
             ))}
-            {glbItems.length > 0 && (
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.55rem', letterSpacing: '0.1em', textTransform: 'uppercase', background: 'var(--black)', color: 'var(--white)', padding: '0.15rem 0.5rem' }}>○ 3D</span>
-            )}
           </div>
         </div>
-
-        {/* Right: stats grid */}
         <div style={{ padding: '4rem 3rem', display: 'grid', gridTemplateColumns: '1fr 1fr', alignContent: 'start', gap: '0' }}>
           <div style={{ fontFamily: 'var(--font-mono)', fontSize: '5rem', fontWeight: 700, color: 'var(--gray-50)', lineHeight: 1, letterSpacing: '-0.05em', gridColumn: '1/-1', marginBottom: '2rem', userSelect: 'none' }}>
             {String(project.order).padStart(2, '0')}
           </div>
           {[
             ['□ Images', `${imageItems.length} files`],
-            ['○ Models', `${glbItems.length} glb`],
             ['× Year', String(project.year)],
-            ['□ Season', project.season],
+            ['○ Season', project.season],
+            ['□ Semester', project.semester],
           ].map(([k, v]) => (
             <div key={k} style={{ borderTop: '1px solid var(--gray-100)', padding: '1rem 0', paddingRight: '1rem' }}>
               <div className="label" style={{ marginBottom: '0.3rem' }}>{k}</div>
@@ -81,7 +72,7 @@ export function ProjectPageClient({ project, prev, next }: { project: Project; p
       {/* ── CAROUSEL ── */}
       <div style={{ padding: '3rem', borderBottom: '1px solid var(--black)' }}>
         <div className="label" style={{ marginBottom: '1.5rem' }}>
-          <span style={{ color: 'var(--beige-dark)', marginRight: '0.5rem' }}>□</span>Documentation — {project.media.length} files
+          <span style={{ color: 'var(--beige-dark)', marginRight: '0.5rem' }}>□</span>Documentation — {imageItems.length} files
         </div>
         <Carousel items={project.media} projectTitle={project.title} />
       </div>
@@ -103,28 +94,10 @@ export function ProjectPageClient({ project, prev, next }: { project: Project; p
                     onMouseLeave={(e) => ((e.currentTarget as HTMLImageElement).style.filter = 'grayscale(100%)')}
                   />
                   <div style={{ position: 'absolute', bottom: '0.5rem', left: '0.75rem', fontFamily: 'var(--font-mono)', fontSize: '0.45rem', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.6)', pointerEvents: 'none', textTransform: 'uppercase' }}>
-                    {CATEGORY_SYMBOL[img.category || ''] || '×'} {String(i + 1).padStart(2, '0')}
+                    {String(i + 1).padStart(2, '0')}
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </ScrollReveal>
-      )}
-
-      {/* ── 3D MODELS ── */}
-      {glbItems.length > 0 && (
-        <ScrollReveal>
-          <div style={{ background: 'var(--black)', borderBottom: '1px solid var(--gray-800)', padding: '3rem' }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem', marginBottom: '2rem' }}>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '1.5rem', color: 'var(--gray-800)' }}>○</span>
-              <div>
-                <div className="label" style={{ color: 'var(--gray-600)', marginBottom: '0.3rem' }}>3D Model</div>
-                <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 300, fontSize: '0.8rem', color: 'var(--gray-400)', fontStyle: 'italic' }}>// slowly rotating — interactive</span>
-              </div>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: `repeat(${glbItems.length}, 1fr)`, gap: '1px' }}>
-              {glbItems.map((glb, i) => <GlbViewer key={i} src={glb.src} height={520} />)}
             </div>
           </div>
         </ScrollReveal>
@@ -142,7 +115,6 @@ export function ProjectPageClient({ project, prev, next }: { project: Project; p
             <div className="label" style={{ color: 'var(--gray-400)', marginTop: '0.2rem' }}>{prev.semester}</div>
           </Link>
         ) : <div style={{ borderRight: '1px solid var(--black)', borderTop: '1px solid var(--black)' }} />}
-
         {next ? (
           <Link href={`/project/${next.id}`} data-hover style={{ padding: '2.5rem 3rem', textDecoration: 'none', borderTop: '1px solid var(--black)', textAlign: 'right', display: 'block', transition: 'background 0.2s' }}
             onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = 'var(--gray-50)')}
@@ -158,5 +130,3 @@ export function ProjectPageClient({ project, prev, next }: { project: Project; p
     </div>
   );
 }
-
-const CATEGORY_SYMBOL: Record<string, string> = { Drawing: '□', Model: '○', Process: '×', Panel: '□' };
