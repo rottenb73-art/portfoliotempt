@@ -37,7 +37,7 @@ export const projects: Project[] = [
     order: 4,
     wip: true,
     shortDescription: 'Residential complex composed of modular units.',
-    longDescription: 'A residential complex composed of modular units currently in development. Exploring density, verticality, and the relationship between public ground-floor programming and private residential above.',
+    longDescription: '',
     tags: ['Mixed-Use', 'Urban Density'],
     coverOverride: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Drawings/comprehensive plan.jpg')}`,
     media: [
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     season: 'Fall',
     order: 3,
     shortDescription: 'Modern day public bath house project.',
-    longDescription: 'Designed to serve as a contemporary civic anchor, the bathhouse draws on the ritual and communal heritage of public bathing — organized around light, material warmth, and procession through water.',
+    longDescription: '',
     tags: ['Public Building', 'Civic', 'Materiality'],
     coverOverride: `${BASE}/${enc('BATH HOUSE, Fall 2025/diagramcroppreview.jpg')}`,
     media: [
@@ -81,8 +81,11 @@ export const projects: Project[] = [
       { type: 'image', src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/model2.png')}`, alt: 'Physical Model — View 2', category: 'Model Pics' },
       { type: 'image', src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/model3.png')}`, alt: 'Physical Model — View 3', category: 'Model Pics' },
       { type: 'image', src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/model4.png')}`, alt: 'Physical Model — View 4', category: 'Model Pics' },
-      { type: 'image', src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Extra images/FINAL DIAGRAM PAGE.png')}`, alt: 'Final Diagram', category: 'Extra Images' },
-      { type: 'image', src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Extra images/ViewCapture20250206_162337.png')}`, alt: 'View Capture', category: 'Extra Images' },
+      // Chunk Model pics
+      { type: 'image', src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/chunkmodel1.jpg')}`, alt: 'Chunk Model — View 1', category: 'Chunk Model' },
+      { type: 'image', src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/chunkmodel2.jpg')}`, alt: 'Chunk Model — View 2', category: 'Chunk Model' },
+      { type: 'image', src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/chunkmodel3.jpg')}`, alt: 'Chunk Model — View 3', category: 'Chunk Model' },
+      { type: 'image', src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/chunkmodel4.jpg')}`, alt: 'Chunk Model — View 4', category: 'Chunk Model' },
     ],
   },
   {
@@ -92,8 +95,10 @@ export const projects: Project[] = [
     year: 2025,
     season: 'Spring',
     order: 2,
-    shortDescription: 'Single-family residence integrating with the surrounding landscape.',
-    longDescription: `Situated on the southern bank of the Riverside in WA, this single-family residence rejects any pure platonic form and embraces a series of volumes, voids, and angular folds that respond to the site's dramatic topography and the natural movement of water and light. The design draws inspiration from geological strata — horizontal layers that fracture, shift, and tilt over time.
+    shortDescription: 'Riverside single family houses that respond to the environment, site, and neighboring houses.',
+    longDescription: `When tasked with developing a building to respond to a set site and environment it is essential to research. Our site in Sunriver, Oregon had many crucial factors to consider before developing a house. The climate, environment, and topography became our focus in our research. The area experiences a low amount of precipitation due to it being located in the rain shadow of surrounding mountains. This caused us to really take into consideration elements like a roof to respond to the climate. The area sits on a high desert plateau and our site has two rivers west of the property. With no budget, these site conditions asked us to think creatively throughout our design process.
+
+To start our design process we began abstract compositions using the defining lines, angles, and shapes of airports across the world. Using trace paper, we could hand draw these compositions and connect shapes and lines based on the defining elements of a satellite view of an airport. These figure and ground drawings were then combined in our group and subject to be manipulated to however each member saw fit. Some saw plan conditions while others represented interesting sections and elevations. To further express what each group member was envisioning, we created three dimensional artifacts and extrusions. These projections started to form spaces of habitation and the formation of a plan view of a building. Inspiration from the group's drawings is present throughout our building. Some pieces are exact shapes extruded as well as inspiration in some of our more monolithic supporting elements. In response to the site being sloped on a riverside, we decided on making our house step down the slope in three layers to create different levels of spaces. The highest spaces serve as social areas and private spaces are found as you maneuver down towards the river.
 
 In contradiction to the downward pull of the floor, the roof is angled to pull space circulation and light up the slope. Our roof design is inspired by the Dancing Light House by Kendle Design Collaborative. However, our roof responds to our site and organizations of social to private spaces in the angles each roof plane is tilted. The roof towards the front is the highest tilted angle up while the lowest step has a less inclined roof. This allows for a better feeling of refuge in the private spaces and allows less cover and more light in the social spaces. The roof is supported by a few columns but mainly monolithic masses. The masses are meant to serve as geological and boulder-like in correlation to the surrounding volcanoes and mountains.`,
     coverOverride: `${BASE}/${enc('gif previews/translatedgif.gif')}`,

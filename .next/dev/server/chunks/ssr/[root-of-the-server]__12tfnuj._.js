@@ -191,7 +191,7 @@ const projects = [
         order: 4,
         wip: true,
         shortDescription: 'Residential complex composed of modular units.',
-        longDescription: 'A residential complex composed of modular units currently in development. Exploring density, verticality, and the relationship between public ground-floor programming and private residential above.',
+        longDescription: '',
         tags: [
             'Mixed-Use',
             'Urban Density'
@@ -238,7 +238,7 @@ const projects = [
         season: 'Fall',
         order: 3,
         shortDescription: 'Modern day public bath house project.',
-        longDescription: 'Designed to serve as a contemporary civic anchor, the bathhouse draws on the ritual and communal heritage of public bathing — organized around light, material warmth, and procession through water.',
+        longDescription: '',
         tags: [
             'Public Building',
             'Civic',
@@ -290,29 +290,30 @@ const projects = [
                 alt: 'Physical Model — View 4',
                 category: 'Model Pics'
             },
+            // Chunk Model pics
             {
                 type: 'image',
                 src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/chunkmodel1.jpg')}`,
                 alt: 'Chunk Model — View 1',
-                category: 'Model Pics'
+                category: 'Chunk Model'
             },
             {
                 type: 'image',
                 src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/chunkmodel2.jpg')}`,
                 alt: 'Chunk Model — View 2',
-                category: 'Model Pics'
+                category: 'Chunk Model'
             },
             {
                 type: 'image',
                 src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/chunkmodel3.jpg')}`,
                 alt: 'Chunk Model — View 3',
-                category: 'Model Pics'
+                category: 'Chunk Model'
             },
             {
                 type: 'image',
                 src: `${BASE}/${enc('BATH HOUSE, Fall 2025/Model Pics/chunkmodel4.jpg')}`,
                 alt: 'Chunk Model — View 4',
-                category: 'Model Pics'
+                category: 'Chunk Model'
             }
         ]
     },

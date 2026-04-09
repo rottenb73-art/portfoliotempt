@@ -44,6 +44,7 @@ function Hero({ coverPhoto }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                className: "hero-section",
                 style: {
                     minHeight: '100vh',
                     display: 'grid',
@@ -58,7 +59,7 @@ function Hero({ coverPhoto }) {
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'space-between',
-                            padding: '6rem 3rem 3rem',
+                            padding: 'clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 3rem) clamp(1.5rem, 4vw, 3rem)',
                             position: 'relative',
                             overflow: 'hidden'
                         },
@@ -66,10 +67,11 @@ function Hero({ coverPhoto }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
                                     position: 'absolute',
-                                    top: '1.5rem',
-                                    left: '3rem',
+                                    top: 'clamp(1rem, 3vw, 1.5rem)',
+                                    left: 'clamp(1.5rem, 5vw, 3rem)',
                                     display: 'flex',
-                                    gap: '2rem'
+                                    gap: 'clamp(1rem, 3vw, 2rem)',
+                                    flexWrap: 'wrap'
                                 },
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -77,7 +79,7 @@ function Hero({ coverPhoto }) {
                                         children: "ARCH_PORTFOLIO"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 65,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -88,23 +90,23 @@ function Hero({ coverPhoto }) {
                                         children: "v2024–2026"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 66,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 56,
+                                lineNumber: 57,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
                                     position: 'absolute',
-                                    top: '1.25rem',
-                                    right: '3rem',
+                                    top: 'clamp(1rem, 2.5vw, 1.25rem)',
+                                    right: 'clamp(1.5rem, 5vw, 3rem)',
                                     display: 'grid',
                                     gridTemplateColumns: 'repeat(3,1fr)',
-                                    gap: '0.5rem',
+                                    gap: 'clamp(0.3rem, 1vw, 0.5rem)',
                                     opacity: 0.15
                                 },
                                 children: [
@@ -112,17 +114,17 @@ function Hero({ coverPhoto }) {
                                 ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         style: {
                                             fontFamily: 'var(--font-mono)',
-                                            fontSize: '0.7rem'
+                                            fontSize: 'clamp(0.5rem, 1.2vw, 0.7rem)'
                                         },
                                         children: SYMBOLS[i % 3]
                                     }, i, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 80,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 62,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -143,19 +145,19 @@ function Hero({ coverPhoto }) {
                                             style: {
                                                 fontFamily: 'var(--font-mono)',
                                                 fontWeight: 700,
-                                                fontSize: 'clamp(2.8rem,5.5vw,6rem)',
+                                                fontSize: 'clamp(2.2rem, 8vw, 6rem)',
                                                 letterSpacing: '-0.04em',
                                                 lineHeight: 1
                                             },
                                             children: "AYDEN"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Hero.tsx",
-                                            lineNumber: 71,
+                                            lineNumber: 87,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 70,
+                                        lineNumber: 86,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -166,30 +168,30 @@ function Hero({ coverPhoto }) {
                                                 fontFamily: 'var(--font-mono)',
                                                 fontWeight: 300,
                                                 fontStyle: 'italic',
-                                                fontSize: 'clamp(2.8rem,5.5vw,6rem)',
+                                                fontSize: 'clamp(2.2rem, 8vw, 6rem)',
                                                 letterSpacing: '-0.04em',
                                                 lineHeight: 1
                                             },
                                             children: "PETTIETTE"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Hero.tsx",
-                                            lineNumber: 76,
+                                            lineNumber: 98,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 75,
+                                        lineNumber: 97,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         style: {
-                                            marginTop: '2rem',
+                                            marginTop: 'clamp(1rem, 3vw, 2rem)',
                                             height: '1.4rem'
                                         },
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             style: {
                                                 fontFamily: 'var(--font-mono)',
-                                                fontSize: '0.75rem',
+                                                fontSize: 'clamp(0.65rem, 1.5vw, 0.75rem)',
                                                 color: 'var(--gray-500)',
                                                 letterSpacing: '0.04em'
                                             },
@@ -203,38 +205,38 @@ function Hero({ coverPhoto }) {
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Hero.tsx",
-                                                    lineNumber: 85,
+                                                    lineNumber: 119,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Hero.tsx",
-                                            lineNumber: 83,
+                                            lineNumber: 112,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 82,
+                                        lineNumber: 111,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 69,
+                                lineNumber: 85,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
                                     borderTop: '1px solid var(--black)',
-                                    paddingTop: '1.5rem'
+                                    paddingTop: 'clamp(1rem, 3vw, 1.5rem)'
                                 },
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         style: {
                                             display: 'grid',
-                                            gridTemplateColumns: '1fr 1fr',
+                                            gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
                                             gap: '1rem',
-                                            marginBottom: '1.5rem'
+                                            marginBottom: 'clamp(1rem, 3vw, 1.5rem)'
                                         },
                                         children: [
                                             [
@@ -263,30 +265,30 @@ function Hero({ coverPhoto }) {
                                                         children: k
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Hero.tsx",
-                                                        lineNumber: 95,
+                                                        lineNumber: 134,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         style: {
                                                             fontFamily: 'var(--font-mono)',
-                                                            fontSize: '0.75rem',
+                                                            fontSize: 'clamp(0.65rem, 1.5vw, 0.75rem)',
                                                             fontWeight: 500
                                                         },
                                                         children: v
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Hero.tsx",
-                                                        lineNumber: 96,
+                                                        lineNumber: 135,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, k, true, {
                                                 fileName: "[project]/components/Hero.tsx",
-                                                lineNumber: 94,
+                                                lineNumber: 133,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 126,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -297,13 +299,13 @@ function Hero({ coverPhoto }) {
                                             alignItems: 'center',
                                             gap: '0.75rem',
                                             fontFamily: 'var(--font-mono)',
-                                            fontSize: '0.7rem',
+                                            fontSize: 'clamp(0.6rem, 1.3vw, 0.7rem)',
                                             letterSpacing: '0.1em',
                                             textTransform: 'uppercase',
                                             color: 'var(--white)',
                                             background: 'var(--black)',
                                             textDecoration: 'none',
-                                            padding: '0.6rem 1.25rem',
+                                            padding: 'clamp(0.5rem, 1.5vw, 0.6rem) clamp(1rem, 2.5vw, 1.25rem)',
                                             border: '1px solid var(--black)',
                                             transition: 'background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s'
                                         },
@@ -326,33 +328,35 @@ function Hero({ coverPhoto }) {
                                                 children: "□"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Hero.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 164,
                                                 columnNumber: 15
                                             }, this),
                                             " VIEW_PROJECTS"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 143,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 91,
+                                lineNumber: 125,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 44,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "hero-image-panel",
                         style: {
                             position: 'relative',
                             overflow: 'hidden',
-                            background: 'var(--gray-50)'
+                            background: 'var(--gray-50)',
+                            minHeight: '50vh'
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -375,19 +379,19 @@ function Hero({ coverPhoto }) {
                                     onError: (e)=>e.currentTarget.style.opacity = '0'
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 116,
+                                    lineNumber: 183,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 114,
+                                lineNumber: 176,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
                                     position: 'absolute',
-                                    bottom: '2rem',
-                                    left: '2rem',
+                                    bottom: 'clamp(1rem, 3vw, 2rem)',
+                                    left: 'clamp(1rem, 3vw, 2rem)',
                                     display: 'flex',
                                     gap: '0.75rem',
                                     zIndex: 2,
@@ -396,36 +400,37 @@ function Hero({ coverPhoto }) {
                                 children: SYMBOLS.map((s)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         style: {
                                             fontFamily: 'var(--font-mono)',
-                                            fontSize: '1.25rem',
+                                            fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
                                             color: 'var(--white)',
                                             fontWeight: 300
                                         },
                                         children: s
                                     }, s, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 120,
+                                        lineNumber: 201,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 118,
+                                lineNumber: 191,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 113,
+                        lineNumber: 170,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "hero-vertical-label",
                         style: {
                             position: 'absolute',
-                            bottom: '3rem',
+                            bottom: 'clamp(1.5rem, 4vw, 3rem)',
                             right: '-3.5rem',
                             transform: 'rotate(90deg)',
                             transformOrigin: 'left center',
                             fontFamily: 'var(--font-mono)',
-                            fontSize: '0.55rem',
+                            fontSize: 'clamp(0.45rem, 1vw, 0.55rem)',
                             letterSpacing: '0.3em',
                             color: 'var(--gray-300)',
                             textTransform: 'uppercase',
@@ -434,7 +439,7 @@ function Hero({ coverPhoto }) {
                         children: "ARCHITECTURAL_PORTFOLIO ×"
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 127,
+                        lineNumber: 212,
                         columnNumber: 9
                     }, this)
                 ]
@@ -446,7 +451,7 @@ function Hero({ coverPhoto }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     borderBottom: '1px solid var(--black)',
-                    padding: '0.6rem 0',
+                    padding: 'clamp(0.4rem, 1.2vw, 0.6rem) 0',
                     overflow: 'hidden',
                     background: 'var(--black)'
                 },
@@ -458,10 +463,10 @@ function Hero({ coverPhoto }) {
                             style: {
                                 display: 'inline-flex',
                                 alignItems: 'center',
-                                gap: '2rem',
-                                paddingRight: '2rem',
+                                gap: 'clamp(1rem, 3vw, 2rem)',
+                                paddingRight: 'clamp(1rem, 3vw, 2rem)',
                                 fontFamily: 'var(--font-mono)',
-                                fontSize: '0.6rem',
+                                fontSize: 'clamp(0.5rem, 1.2vw, 0.6rem)',
                                 letterSpacing: '0.15em',
                                 textTransform: 'uppercase',
                                 color: 'var(--gray-300)',
@@ -475,14 +480,14 @@ function Hero({ coverPhoto }) {
                                     children: "○"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 137,
+                                    lineNumber: 250,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "Architectural Design"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 137,
+                                    lineNumber: 250,
                                     columnNumber: 68
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -492,14 +497,14 @@ function Hero({ coverPhoto }) {
                                     children: "□"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 138,
+                                    lineNumber: 251,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "Translation of Space — Fall 2024"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 138,
+                                    lineNumber: 251,
                                     columnNumber: 68
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -509,14 +514,14 @@ function Hero({ coverPhoto }) {
                                     children: "×"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 252,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "Riverside Residential — Spring 2025"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 252,
                                     columnNumber: 68
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -526,14 +531,14 @@ function Hero({ coverPhoto }) {
                                     children: "○"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 140,
+                                    lineNumber: 253,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "Bath House — Fall 2025"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 140,
+                                    lineNumber: 253,
                                     columnNumber: 68
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -543,14 +548,14 @@ function Hero({ coverPhoto }) {
                                     children: "□"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 254,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "Mid Rise Complex — Spring 2026"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 254,
                                     columnNumber: 68
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -560,37 +565,52 @@ function Hero({ coverPhoto }) {
                                     children: "×"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 255,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "Texas A&M University"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 255,
                                     columnNumber: 68
                                 }, this)
                             ]
                         }, i, true, {
                             fileName: "[project]/components/Hero.tsx",
-                            lineNumber: 136,
+                            lineNumber: 238,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/Hero.tsx",
-                    lineNumber: 134,
+                    lineNumber: 236,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Hero.tsx",
-                lineNumber: 133,
+                lineNumber: 230,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
-                children: `@media(max-width:768px){section{grid-template-columns:1fr !important;}}`
+                children: `
+        .hero-section {
+          grid-template-columns: 1fr 1fr;
+        }
+        @media(max-width: 768px) {
+          .hero-section {
+            grid-template-columns: 1fr !important;
+          }
+          .hero-image-panel {
+            min-height: 60vh !important;
+          }
+          .hero-vertical-label {
+            display: none;
+          }
+        }
+      `
             }, void 0, false, {
                 fileName: "[project]/components/Hero.tsx",
-                lineNumber: 148,
+                lineNumber: 261,
                 columnNumber: 7
             }, this)
         ]
@@ -732,12 +752,13 @@ function ProjectCard({ project, isExpanded, onToggle }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 onClick: onToggle,
                 "data-hover": true,
+                className: "project-card-header",
                 style: {
                     display: 'grid',
-                    gridTemplateColumns: '260px 1fr auto',
+                    gridTemplateColumns: 'min(260px, 40vw) 1fr auto',
                     alignItems: 'stretch',
                     cursor: 'pointer',
-                    height: '260px',
+                    minHeight: '260px',
                     transition: 'box-shadow 0.2s ease, transform 0.2s ease'
                 },
                 onMouseEnter: (e)=>{
@@ -753,8 +774,8 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            height: '260px',
-                            width: '260px',
+                            minHeight: '260px',
+                            width: '100%',
                             overflow: 'hidden',
                             position: 'relative',
                             background: 'var(--gray-50)',
@@ -778,7 +799,7 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                 onError: (e)=>e.currentTarget.style.opacity = '0'
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 64,
+                                lineNumber: 79,
                                 columnNumber: 13
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
@@ -797,12 +818,12 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                     children: "□"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 72,
+                                    lineNumber: 87,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 71,
+                                lineNumber: 86,
                                 columnNumber: 13
                             }, this),
                             project.wip && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -826,23 +847,23 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                     children: "× WIP"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 77,
+                                    lineNumber: 92,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 76,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 61,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            padding: '1.75rem 2rem',
+                            padding: 'clamp(1rem, 3vw, 1.75rem) clamp(1rem, 4vw, 2rem)',
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'space-between',
@@ -866,7 +887,7 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                                 children: project.semester
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ProjectCard.tsx",
-                                                lineNumber: 86,
+                                                lineNumber: 108,
                                                 columnNumber: 15
                                             }, this),
                                             project.wip && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -882,7 +903,7 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                                 children: "WIP"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ProjectCard.tsx",
-                                                lineNumber: 87,
+                                                lineNumber: 109,
                                                 columnNumber: 31
                                             }, this),
                                             project.tags.filter((t)=>t !== 'In Progress').map((t)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -898,20 +919,20 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                                     children: t
                                                 }, t, false, {
                                                     fileName: "[project]/components/ProjectCard.tsx",
-                                                    lineNumber: 89,
+                                                    lineNumber: 111,
                                                     columnNumber: 17
                                                 }, this))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 107,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         style: {
                                             fontFamily: 'var(--font-mono)',
                                             fontWeight: 700,
-                                            fontSize: 'clamp(1.2rem,2vw,2rem)',
+                                            fontSize: 'clamp(1.2rem, 2vw, 2rem)',
                                             letterSpacing: '-0.03em',
                                             lineHeight: 1.05,
                                             marginBottom: '0.75rem',
@@ -920,14 +941,14 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                         children: project.title
                                     }, void 0, false, {
                                         fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 114,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         style: {
                                             fontFamily: 'var(--font-mono)',
                                             fontWeight: 300,
-                                            fontSize: '0.72rem',
+                                            fontSize: 'clamp(0.65rem, 1.5vw, 0.72rem)',
                                             lineHeight: 1.6,
                                             color: 'var(--gray-700)',
                                             maxWidth: '380px'
@@ -935,13 +956,13 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                         children: project.shortDescription
                                     }, void 0, false, {
                                         fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 95,
+                                        lineNumber: 125,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 84,
+                                lineNumber: 106,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -953,7 +974,7 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                 children: categoryNames.map((cat)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         style: {
                                             fontFamily: 'var(--font-mono)',
-                                            fontSize: '0.5rem',
+                                            fontSize: 'clamp(0.45rem, 1vw, 0.5rem)',
                                             letterSpacing: '0.06em',
                                             textTransform: 'uppercase',
                                             color: 'var(--gray-400)'
@@ -968,23 +989,23 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                         ]
                                     }, cat, true, {
                                         fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 138,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 99,
+                                lineNumber: 136,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 83,
+                        lineNumber: 98,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            width: '52px',
+                            width: 'clamp(40px, 8vw, 52px)',
                             borderLeft: '1px solid var(--black)',
                             display: 'flex',
                             alignItems: 'center',
@@ -996,7 +1017,7 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             style: {
                                 fontFamily: 'var(--font-mono)',
-                                fontSize: '1.1rem',
+                                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
                                 color: isExpanded ? 'var(--white)' : 'var(--black)',
                                 transform: isExpanded ? 'rotate(45deg)' : 'none',
                                 transition: 'transform 0.35s, color 0.2s',
@@ -1006,12 +1027,12 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/ProjectCard.tsx",
-                            lineNumber: 110,
+                            lineNumber: 162,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 109,
+                        lineNumber: 152,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1027,176 +1048,244 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                     transition: 'max-height 0.8s cubic-bezier(0.16,1,0.3,1)',
                     borderTop: isExpanded ? '1px solid var(--black)' : 'none'
                 },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    style: {
-                        background: 'var(--off-white)',
-                        padding: '1.5rem 2rem',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '1.5px'
-                    },
-                    children: [
-                        isBathHouse && panelItems.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
-                            title: "Showcase Panels — Side by Side",
-                            symbol: "□",
-                            count: panelItems.length,
-                            large: true,
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ThreePanelsSideBySide, {
-                                items: panelItems
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            background: 'var(--off-white)',
+                            padding: 'clamp(1rem, 3vw, 1.5rem) clamp(1rem, 4vw, 2rem)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '1.5px'
+                        },
+                        children: [
+                            isBathHouse && panelItems.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
+                                title: "Showcase Panels — Side by Side",
+                                symbol: "□",
+                                count: panelItems.length,
+                                large: true,
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ThreePanelsSideBySide, {
+                                    items: panelItems
+                                }, void 0, false, {
+                                    fileName: "[project]/components/ProjectCard.tsx",
+                                    lineNumber: 187,
+                                    columnNumber: 15
+                                }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 121,
-                                columnNumber: 15
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/components/ProjectCard.tsx",
-                            lineNumber: 120,
-                            columnNumber: 13
-                        }, this),
-                        isMidRise && (groups['Drawings'] || groups['Art Progression']) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            style: {
-                                display: 'grid',
-                                gridTemplateColumns: '1fr 1fr',
-                                gap: '1.5px'
-                            },
-                            children: [
-                                groups['Drawings'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
-                                    title: "Drawings",
-                                    symbol: "□",
-                                    count: groups['Drawings'].length,
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
-                                        items: groups['Drawings'],
-                                        interval: 5200,
-                                        useContain: true,
-                                        height: 500
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 130,
-                                        columnNumber: 19
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 129,
-                                    columnNumber: 17
-                                }, this),
-                                groups['Art Progression'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
-                                    title: "Art Progression",
-                                    symbol: "×",
-                                    count: groups['Art Progression'].length,
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
-                                        items: groups['Art Progression'],
-                                        interval: 6800,
-                                        useContain: true,
-                                        height: 500
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 135,
-                                        columnNumber: 19
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 134,
-                                    columnNumber: 17
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/ProjectCard.tsx",
-                            lineNumber: 127,
-                            columnNumber: 13
-                        }, this),
-                        subFrameCategories.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            style: {
-                                display: 'grid',
-                                gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
-                                gap: '1.5px'
-                            },
-                            children: subFrameCategories.map((cat, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
-                                    title: cat,
-                                    symbol: SYM[cat] || '×',
-                                    count: groups[cat].length,
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
-                                        items: groups[cat],
-                                        interval: FRAME_INTERVALS[idx % FRAME_INTERVALS.length],
-                                        useContain: CONTAIN_CATS.has(cat)
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 146,
-                                        columnNumber: 19
-                                    }, this)
-                                }, cat, false, {
-                                    fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 145,
-                                    columnNumber: 17
-                                }, this))
-                        }, void 0, false, {
-                            fileName: "[project]/components/ProjectCard.tsx",
-                            lineNumber: 143,
-                            columnNumber: 13
-                        }, this),
-                        project.longDescription && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            style: {
-                                padding: '1.25rem 1.25rem',
-                                borderTop: '1px solid var(--gray-100)',
-                                marginTop: '0.5rem',
-                                display: 'grid',
-                                gridTemplateColumns: project.titleImage ? '1fr auto' : '1fr',
-                                gap: '2rem',
-                                alignItems: 'start'
-                            },
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: project.longDescription.split('\n\n').map((para, i, arr)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            style: {
-                                                fontFamily: 'var(--font-mono)',
-                                                fontWeight: 300,
-                                                fontSize: '0.72rem',
-                                                lineHeight: 1.85,
-                                                color: 'var(--gray-700)',
-                                                maxWidth: '760px',
-                                                marginBottom: i < arr.length - 1 ? '0.9rem' : 0
-                                            },
-                                            children: para.trim()
-                                        }, i, false, {
+                                lineNumber: 186,
+                                columnNumber: 13
+                            }, this),
+                            isMidRise && (groups['Drawings'] || groups['Art Progression']) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "mid-rise-grid",
+                                style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))',
+                                    gap: '1.5px'
+                                },
+                                children: [
+                                    groups['Drawings'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
+                                        title: "Drawings",
+                                        symbol: "□",
+                                        count: groups['Drawings'].length,
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
+                                            items: groups['Drawings'],
+                                            interval: 5200,
+                                            useContain: true,
+                                            height: 500
+                                        }, void 0, false, {
                                             fileName: "[project]/components/ProjectCard.tsx",
-                                            lineNumber: 161,
+                                            lineNumber: 200,
                                             columnNumber: 19
-                                        }, this))
-                                }, void 0, false, {
-                                    fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 159,
-                                    columnNumber: 15
-                                }, this),
-                                project.titleImage && // eslint-disable-next-line @next/next/no-img-element
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ProjectCard.tsx",
+                                        lineNumber: 199,
+                                        columnNumber: 17
+                                    }, this),
+                                    groups['Art Progression'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
+                                        title: "Art Progression",
+                                        symbol: "×",
+                                        count: groups['Art Progression'].length,
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
+                                            items: groups['Art Progression'],
+                                            interval: 6800,
+                                            useContain: true,
+                                            height: 500
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/ProjectCard.tsx",
+                                            lineNumber: 205,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ProjectCard.tsx",
+                                        lineNumber: 204,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/ProjectCard.tsx",
+                                lineNumber: 193,
+                                columnNumber: 13
+                            }, this),
+                            !isBathHouse && !isMidRise && subFrameCategories.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "folders-grid",
+                                style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+                                    gap: '1.5px'
+                                },
+                                children: subFrameCategories.map((cat, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
+                                        title: cat,
+                                        symbol: SYM[cat] || '×',
+                                        count: groups[cat].length,
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
+                                            items: groups[cat],
+                                            interval: FRAME_INTERVALS[idx % FRAME_INTERVALS.length],
+                                            useContain: CONTAIN_CATS.has(cat)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/ProjectCard.tsx",
+                                            lineNumber: 220,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, cat, false, {
+                                        fileName: "[project]/components/ProjectCard.tsx",
+                                        lineNumber: 219,
+                                        columnNumber: 17
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/components/ProjectCard.tsx",
+                                lineNumber: 213,
+                                columnNumber: 13
+                            }, this),
+                            (isBathHouse || isMidRise) && subFrameCategories.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "folders-grid",
+                                style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+                                    gap: '1.5px'
+                                },
+                                children: subFrameCategories.map((cat, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
+                                        title: cat,
+                                        symbol: SYM[cat] || '×',
+                                        count: groups[cat].length,
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
+                                            items: groups[cat],
+                                            interval: FRAME_INTERVALS[idx % FRAME_INTERVALS.length],
+                                            useContain: CONTAIN_CATS.has(cat)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/ProjectCard.tsx",
+                                            lineNumber: 235,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, cat, false, {
+                                        fileName: "[project]/components/ProjectCard.tsx",
+                                        lineNumber: 234,
+                                        columnNumber: 17
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/components/ProjectCard.tsx",
+                                lineNumber: 228,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/ProjectCard.tsx",
+                        lineNumber: 176,
+                        columnNumber: 9
+                    }, this),
+                    project.longDescription && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "project-description-grid",
+                        style: {
+                            background: 'var(--white)',
+                            borderTop: '1px solid var(--black)',
+                            padding: 'clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 3rem)',
+                            display: 'grid',
+                            gridTemplateColumns: project.titleImage ? '1fr 1fr' : '1fr',
+                            gap: 'clamp(2rem, 4vw, 3rem)',
+                            alignItems: 'start'
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "label",
+                                        style: {
+                                            marginBottom: '1rem'
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                style: {
+                                                    color: 'var(--beige-dark)',
+                                                    marginRight: '0.5rem'
+                                                },
+                                                children: "○"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/ProjectCard.tsx",
+                                                lineNumber: 255,
+                                                columnNumber: 17
+                                            }, this),
+                                            "Project Description"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/ProjectCard.tsx",
+                                        lineNumber: 254,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        style: {
+                                            fontFamily: 'var(--font-mono)',
+                                            fontSize: 'clamp(0.7rem, 1.5vw, 0.8rem)',
+                                            lineHeight: 1.8,
+                                            color: 'var(--gray-700)',
+                                            whiteSpace: 'pre-wrap'
+                                        },
+                                        children: project.longDescription
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ProjectCard.tsx",
+                                        lineNumber: 257,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/ProjectCard.tsx",
+                                lineNumber: 253,
+                                columnNumber: 13
+                            }, this),
+                            project.titleImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    position: 'relative',
+                                    width: '100%',
+                                    border: '1px solid var(--black)'
+                                },
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: project.titleImage,
-                                    alt: "Project title",
+                                    alt: `${project.title} overview`,
                                     style: {
-                                        width: '280px',
-                                        flexShrink: 0,
+                                        width: '100%',
                                         display: 'block',
-                                        border: '1px solid var(--gray-100)'
+                                        objectFit: 'cover'
                                     },
                                     onError: (e)=>e.currentTarget.style.display = 'none'
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 168,
+                                    lineNumber: 270,
                                     columnNumber: 17
                                 }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/ProjectCard.tsx",
-                            lineNumber: 158,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/ProjectCard.tsx",
-                    lineNumber: 116,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                            }, void 0, false, {
+                                fileName: "[project]/components/ProjectCard.tsx",
+                                lineNumber: 268,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/ProjectCard.tsx",
+                        lineNumber: 244,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 115,
+                lineNumber: 175,
                 columnNumber: 7
             }, this)
         ]
@@ -1206,60 +1295,33 @@ function ProjectCard({ project, isExpanded, onToggle }) {
         columnNumber: 5
     }, this);
 }
-// ── Folder window chrome ──────────────────────────────────────────────────────
+// ── Folder window frame ──────────────────────────────────────────────────────
 function FolderWindow({ title, symbol, count, children, large }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: {
             border: '1px solid var(--black)',
-            background: 'var(--white)'
+            background: 'var(--white)',
+            overflow: 'hidden'
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.55rem',
-                    padding: '0.4rem 0.65rem',
+                    background: 'var(--gray-50)',
                     borderBottom: '1px solid var(--black)',
-                    background: 'var(--black)'
+                    padding: 'clamp(0.3rem, 1.5vw, 0.4rem) clamp(0.4rem, 2vw, 0.6rem)',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center'
                 },
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        style: {
-                            display: 'flex',
-                            gap: '4px'
-                        },
-                        children: [
-                            0,
-                            1,
-                            2
-                        ].map((i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                style: {
-                                    width: 7,
-                                    height: 7,
-                                    borderRadius: '50%',
-                                    background: 'var(--gray-700)',
-                                    border: '1px solid #2a2a2a'
-                                }
-                            }, i, false, {
-                                fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 192,
-                                columnNumber: 31
-                            }, this))
-                    }, void 0, false, {
-                        fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 191,
-                        columnNumber: 9
-                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         style: {
                             fontFamily: 'var(--font-mono)',
-                            fontSize: large ? '0.58rem' : '0.5rem',
-                            letterSpacing: '0.12em',
+                            fontSize: large ? 'clamp(0.5rem, 1.2vw, 0.62rem)' : 'clamp(0.45rem, 1vw, 0.52rem)',
+                            letterSpacing: '0.08em',
                             textTransform: 'uppercase',
-                            color: 'var(--beige-dark)',
-                            flex: 1,
-                            fontWeight: large ? 500 : 400
+                            color: 'var(--black)',
+                            fontWeight: 500
                         },
                         children: [
                             symbol,
@@ -1268,13 +1330,13 @@ function FolderWindow({ title, symbol, count, children, large }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 194,
+                        lineNumber: 299,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         style: {
                             fontFamily: 'var(--font-mono)',
-                            fontSize: '0.44rem',
+                            fontSize: 'clamp(0.4rem, 0.9vw, 0.44rem)',
                             color: 'var(--gray-600)',
                             letterSpacing: '0.08em'
                         },
@@ -1285,35 +1347,36 @@ function FolderWindow({ title, symbol, count, children, large }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 197,
+                        lineNumber: 309,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 190,
+                lineNumber: 291,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 201,
+                lineNumber: 318,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ProjectCard.tsx",
-        lineNumber: 189,
+        lineNumber: 290,
         columnNumber: 5
     }, this);
 }
-// ── 3 panels side by side ─────────────────────────────────────────────────────
+// ── 3 panels side by side (responsive) ───────────────────────────────────────
 function ThreePanelsSideBySide({ items }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "panels-grid",
         style: {
             display: 'grid',
-            gridTemplateColumns: `repeat(${Math.min(items.length, 3)}, 1fr)`,
+            gridTemplateColumns: `repeat(auto-fit, minmax(min(100%, 300px), 1fr))`,
             gap: 0
         },
         children: items.map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1350,21 +1413,21 @@ function ThreePanelsSideBySide({ items }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 213,
+                        lineNumber: 338,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
                             position: 'absolute',
-                            top: '0.5rem',
-                            left: '0.5rem',
+                            top: 'clamp(0.3rem, 1vw, 0.5rem)',
+                            left: 'clamp(0.3rem, 1vw, 0.5rem)',
                             background: 'rgba(0,0,0,0.55)',
                             padding: '0.15rem 0.4rem'
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             style: {
                                 fontFamily: 'var(--font-mono)',
-                                fontSize: '0.42rem',
+                                fontSize: 'clamp(0.38rem, 0.9vw, 0.42rem)',
                                 letterSpacing: '0.12em',
                                 color: 'rgba(255,255,255,0.8)',
                                 textTransform: 'uppercase'
@@ -1375,23 +1438,23 @@ function ThreePanelsSideBySide({ items }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ProjectCard.tsx",
-                            lineNumber: 233,
+                            lineNumber: 364,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 232,
+                        lineNumber: 357,
                         columnNumber: 11
                     }, this)
                 ]
             }, i, true, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 211,
+                lineNumber: 332,
                 columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "[project]/components/ProjectCard.tsx",
-        lineNumber: 209,
+        lineNumber: 326,
         columnNumber: 5
     }, this);
 }
@@ -1480,7 +1543,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                         onError: (e)=>e.currentTarget.style.opacity = '0'
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 287,
+                        lineNumber: 430,
                         columnNumber: 9
                     }, this),
                     pending !== null && // eslint-disable-next-line @next/next/no-img-element
@@ -1500,7 +1563,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                         onError: (e)=>e.currentTarget.style.opacity = '0'
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 293,
+                        lineNumber: 436,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1509,7 +1572,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                             bottom: 0,
                             left: 0,
                             right: 0,
-                            padding: '0.35rem 0.55rem',
+                            padding: 'clamp(0.25rem, 1vw, 0.35rem) clamp(0.4rem, 1.5vw, 0.55rem)',
                             background: 'linear-gradient(transparent, rgba(0,0,0,0.45))',
                             pointerEvents: 'none',
                             zIndex: 5
@@ -1517,7 +1580,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             style: {
                                 fontFamily: 'var(--font-mono)',
-                                fontSize: '0.42rem',
+                                fontSize: 'clamp(0.38rem, 0.9vw, 0.42rem)',
                                 letterSpacing: '0.09em',
                                 textTransform: 'uppercase',
                                 color: 'rgba(255,255,255,0.65)'
@@ -1531,12 +1594,12 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ProjectCard.tsx",
-                            lineNumber: 299,
+                            lineNumber: 451,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 298,
+                        lineNumber: 441,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1552,7 +1615,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 303,
+                        lineNumber: 461,
                         columnNumber: 9
                     }, this),
                     items.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1583,7 +1646,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     style: {
                                         fontFamily: 'var(--font-mono)',
-                                        fontSize: '0.7rem',
+                                        fontSize: 'clamp(0.6rem, 1.5vw, 0.7rem)',
                                         background: 'var(--black)',
                                         color: 'var(--white)',
                                         padding: '0.1rem 0.28rem'
@@ -1591,12 +1654,12 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                                     children: "←"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 309,
+                                    lineNumber: 467,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 306,
+                                lineNumber: 464,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1626,7 +1689,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     style: {
                                         fontFamily: 'var(--font-mono)',
-                                        fontSize: '0.7rem',
+                                        fontSize: 'clamp(0.6rem, 1.5vw, 0.7rem)',
                                         background: 'var(--black)',
                                         color: 'var(--white)',
                                         padding: '0.1rem 0.28rem'
@@ -1634,12 +1697,12 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                                     children: "→"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 314,
+                                    lineNumber: 478,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 311,
+                                lineNumber: 475,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -1647,7 +1710,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 285,
+                lineNumber: 422,
                 columnNumber: 7
             }, this),
             items.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1656,7 +1719,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                     justifyContent: 'center',
                     alignItems: 'center',
                     gap: '3px',
-                    padding: '0.3rem',
+                    padding: 'clamp(0.25rem, 1vw, 0.3rem)',
                     borderTop: '1px solid var(--gray-100)'
                 },
                 children: items.map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1675,20 +1738,35 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                         }
                     }, i, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 322,
+                        lineNumber: 499,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 320,
+                lineNumber: 490,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ProjectCard.tsx",
-        lineNumber: 284,
+        lineNumber: 421,
         columnNumber: 5
     }, this);
+}
+// Add responsive styles for description grid
+if (typeof document !== 'undefined') {
+    const style = document.createElement('style');
+    style.textContent = `
+    @media(max-width: 768px) {
+      .project-description-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  `;
+    if (!document.getElementById('project-card-responsive-styles')) {
+        style.id = 'project-card-responsive-styles';
+        document.head.appendChild(style);
+    }
 }
 }),
 "[project]/components/ProjectTimeline.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
@@ -1719,29 +1797,31 @@ function ProjectTimeline({ projects }) {
         id: "work",
         style: {
             background: 'var(--white)',
-            paddingBottom: '6rem'
+            paddingBottom: 'clamp(3rem, 8vw, 6rem)'
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     borderBottom: '1px solid var(--black)',
-                    padding: '3rem 3rem 2rem',
+                    padding: 'clamp(2rem, 5vw, 3rem) clamp(1.5rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem)',
                     display: 'flex',
                     alignItems: 'flex-end',
-                    justifyContent: 'space-between'
+                    justifyContent: 'space-between',
+                    flexWrap: 'wrap',
+                    gap: '1rem'
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
                             display: 'flex',
                             alignItems: 'baseline',
-                            gap: '1.5rem'
+                            gap: 'clamp(1rem, 2.5vw, 1.5rem)'
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 style: {
                                     fontFamily: 'var(--font-mono)',
-                                    fontSize: '2rem',
+                                    fontSize: 'clamp(1.5rem, 3.5vw, 2rem)',
                                     color: 'var(--gray-100)',
                                     fontWeight: 700,
                                     userSelect: 'none'
@@ -1749,7 +1829,7 @@ function ProjectTimeline({ projects }) {
                                 children: "□"
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectTimeline.tsx",
-                                lineNumber: 17,
+                                lineNumber: 25,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1762,33 +1842,33 @@ function ProjectTimeline({ projects }) {
                                         children: "Selected Work"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ProjectTimeline.tsx",
-                                        lineNumber: 19,
+                                        lineNumber: 33,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                         style: {
                                             fontFamily: 'var(--font-mono)',
                                             fontWeight: 700,
-                                            fontSize: 'clamp(1.8rem,3vw,3rem)',
+                                            fontSize: 'clamp(1.5rem, 4vw, 3rem)',
                                             letterSpacing: '-0.03em',
                                             lineHeight: 1
                                         },
                                         children: "PROJECTS"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ProjectTimeline.tsx",
-                                        lineNumber: 20,
+                                        lineNumber: 34,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ProjectTimeline.tsx",
-                                lineNumber: 18,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProjectTimeline.tsx",
-                        lineNumber: 16,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1804,7 +1884,7 @@ function ProjectTimeline({ projects }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ProjectTimeline.tsx",
-                                lineNumber: 26,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1816,13 +1896,13 @@ function ProjectTimeline({ projects }) {
                                 children: "2024 — 2026"
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectTimeline.tsx",
-                                lineNumber: 27,
+                                lineNumber: 47,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProjectTimeline.tsx",
-                        lineNumber: 25,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1841,10 +1921,11 @@ function ProjectTimeline({ projects }) {
                             },
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "project-timeline-decorator",
                                     style: {
                                         position: 'absolute',
-                                        top: '2rem',
-                                        left: '3rem',
+                                        top: 'clamp(1.5rem, 3vw, 2rem)',
+                                        left: 'clamp(1rem, 4vw, 3rem)',
                                         display: 'flex',
                                         flexDirection: 'column',
                                         alignItems: 'center',
@@ -1855,14 +1936,14 @@ function ProjectTimeline({ projects }) {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             style: {
                                                 fontFamily: 'var(--font-mono)',
-                                                fontSize: '1.1rem',
+                                                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
                                                 color: 'var(--gray-200)',
                                                 fontWeight: 300
                                             },
                                             children: SYMBOLS[i]
                                         }, void 0, false, {
                                             fileName: "[project]/components/ProjectTimeline.tsx",
-                                            lineNumber: 42,
+                                            lineNumber: 67,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1870,30 +1951,31 @@ function ProjectTimeline({ projects }) {
                                             style: {
                                                 color: 'var(--gray-300)',
                                                 writingMode: 'vertical-rl',
-                                                fontSize: '0.55rem',
+                                                fontSize: 'clamp(0.45rem, 1vw, 0.55rem)',
                                                 letterSpacing: '0.2em'
                                             },
                                             children: project.semester
                                         }, void 0, false, {
                                             fileName: "[project]/components/ProjectTimeline.tsx",
-                                            lineNumber: 45,
+                                            lineNumber: 75,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ProjectTimeline.tsx",
-                                    lineNumber: 37,
+                                    lineNumber: 57,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "project-timeline-number",
                                     style: {
                                         position: 'absolute',
-                                        right: '3rem',
+                                        right: 'clamp(1rem, 4vw, 3rem)',
                                         top: '50%',
                                         transform: 'translateY(-50%)',
                                         fontFamily: 'var(--font-mono)',
                                         fontWeight: 700,
-                                        fontSize: 'clamp(5rem,10vw,10rem)',
+                                        fontSize: 'clamp(3rem, 12vw, 10rem)',
                                         lineHeight: 1,
                                         color: 'var(--gray-50)',
                                         userSelect: 'none',
@@ -1904,12 +1986,13 @@ function ProjectTimeline({ projects }) {
                                     children: String(projects.length - i).padStart(2, '0')
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectTimeline.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 86,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "project-card-wrapper",
                                     style: {
-                                        paddingLeft: '7rem'
+                                        paddingLeft: 'clamp(0px, 10vw, 7rem)'
                                     },
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ProjectCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ProjectCard"], {
                                         project: project,
@@ -1917,28 +2000,44 @@ function ProjectTimeline({ projects }) {
                                         onToggle: ()=>setActiveProject(activeProject === project.id ? null : project.id)
                                     }, void 0, false, {
                                         fileName: "[project]/components/ProjectTimeline.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 105,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectTimeline.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 104,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ProjectTimeline.tsx",
-                            lineNumber: 35,
+                            lineNumber: 55,
                             columnNumber: 13
                         }, this)
                     }, project.id, false, {
                         fileName: "[project]/components/ProjectTimeline.tsx",
-                        lineNumber: 34,
+                        lineNumber: 54,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/ProjectTimeline.tsx",
-                lineNumber: 32,
+                lineNumber: 52,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
+                children: `
+        @media(max-width: 640px) {
+          .project-timeline-decorator {
+            display: none !important;
+          }
+          .project-card-wrapper {
+            padding-left: 0 !important;
+          }
+        }
+      `
+            }, void 0, false, {
+                fileName: "[project]/components/ProjectTimeline.tsx",
+                lineNumber: 116,
                 columnNumber: 7
             }, this)
         ]
