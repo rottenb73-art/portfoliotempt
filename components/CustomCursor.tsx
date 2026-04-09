@@ -11,6 +11,26 @@ export function CustomCursor() {
   useEffect(() => {
     const onMove = (e: MouseEvent) => {
       pos.current = { x: e.clientX, y: e.clientY };
+      
+      // Check if cursor is over black background
+      const element = document.elementFromPoint(e.clientX, e.clientY);
+      if (element && dotRef.current && ringRef.current) {
+        const bgColor = window.getComputedStyle(element).backgroundColor;
+        
+        // Check if background is black or if element is inside #about section
+        const isBlackBg = bgColor === 'rgb(0, 0, 0)' || 
+                         element.closest('#about') !== null ||
+                         element.closest('section[style*="background: var(--black)"]') !== null ||
+                         element.closest('section[style*="background-color: var(--black)"]') !== null;
+        
+        if (isBlackBg) {
+          dotRef.current.classList.add('on-black');
+          ringRef.current.classList.add('on-black');
+        } else {
+          dotRef.current.classList.remove('on-black');
+          ringRef.current.classList.remove('on-black');
+        }
+      }
     };
 
     const onEnter = () => ringRef.current?.classList.add('hovering');

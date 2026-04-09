@@ -752,13 +752,12 @@ function ProjectCard({ project, isExpanded, onToggle }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 onClick: onToggle,
                 "data-hover": true,
-                className: "project-card-header",
                 style: {
                     display: 'grid',
-                    gridTemplateColumns: 'min(260px, 40vw) 1fr auto',
+                    gridTemplateColumns: '260px 1fr auto',
                     alignItems: 'stretch',
                     cursor: 'pointer',
-                    minHeight: '260px',
+                    height: '260px',
                     transition: 'box-shadow 0.2s ease, transform 0.2s ease'
                 },
                 onMouseEnter: (e)=>{
@@ -774,8 +773,8 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            minHeight: '260px',
-                            width: '100%',
+                            height: '260px',
+                            width: '260px',
                             overflow: 'hidden',
                             position: 'relative',
                             background: 'var(--gray-50)',
@@ -799,7 +798,7 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                 onError: (e)=>e.currentTarget.style.opacity = '0'
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 79,
+                                lineNumber: 64,
                                 columnNumber: 13
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
@@ -818,12 +817,12 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                     children: "□"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 87,
+                                    lineNumber: 72,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 86,
+                                lineNumber: 71,
                                 columnNumber: 13
                             }, this),
                             project.wip && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -847,23 +846,23 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                     children: "× WIP"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 77,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 91,
+                                lineNumber: 76,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 69,
+                        lineNumber: 61,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            padding: 'clamp(1rem, 3vw, 1.75rem) clamp(1rem, 4vw, 2rem)',
+                            padding: '1.75rem 2rem',
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'space-between',
@@ -887,7 +886,7 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                                 children: project.semester
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ProjectCard.tsx",
-                                                lineNumber: 108,
+                                                lineNumber: 86,
                                                 columnNumber: 15
                                             }, this),
                                             project.wip && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -903,7 +902,7 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                                 children: "WIP"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/ProjectCard.tsx",
-                                                lineNumber: 109,
+                                                lineNumber: 87,
                                                 columnNumber: 31
                                             }, this),
                                             project.tags.filter((t)=>t !== 'In Progress').map((t)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -919,20 +918,20 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                                     children: t
                                                 }, t, false, {
                                                     fileName: "[project]/components/ProjectCard.tsx",
-                                                    lineNumber: 111,
+                                                    lineNumber: 89,
                                                     columnNumber: 17
                                                 }, this))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 85,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         style: {
                                             fontFamily: 'var(--font-mono)',
                                             fontWeight: 700,
-                                            fontSize: 'clamp(1.2rem, 2vw, 2rem)',
+                                            fontSize: 'clamp(1.2rem,2vw,2rem)',
                                             letterSpacing: '-0.03em',
                                             lineHeight: 1.05,
                                             marginBottom: '0.75rem',
@@ -941,14 +940,14 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                         children: project.title
                                     }, void 0, false, {
                                         fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 114,
+                                        lineNumber: 92,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         style: {
                                             fontFamily: 'var(--font-mono)',
                                             fontWeight: 300,
-                                            fontSize: 'clamp(0.65rem, 1.5vw, 0.72rem)',
+                                            fontSize: '0.72rem',
                                             lineHeight: 1.6,
                                             color: 'var(--gray-700)',
                                             maxWidth: '380px'
@@ -956,13 +955,13 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                         children: project.shortDescription
                                     }, void 0, false, {
                                         fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 125,
+                                        lineNumber: 95,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 106,
+                                lineNumber: 84,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -974,7 +973,7 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                 children: categoryNames.map((cat)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         style: {
                                             fontFamily: 'var(--font-mono)',
-                                            fontSize: 'clamp(0.45rem, 1vw, 0.5rem)',
+                                            fontSize: '0.5rem',
                                             letterSpacing: '0.06em',
                                             textTransform: 'uppercase',
                                             color: 'var(--gray-400)'
@@ -989,23 +988,23 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                                         ]
                                     }, cat, true, {
                                         fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 138,
+                                        lineNumber: 101,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 136,
+                                lineNumber: 99,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 98,
+                        lineNumber: 83,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            width: 'clamp(40px, 8vw, 52px)',
+                            width: '52px',
                             borderLeft: '1px solid var(--black)',
                             display: 'flex',
                             alignItems: 'center',
@@ -1017,7 +1016,7 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             style: {
                                 fontFamily: 'var(--font-mono)',
-                                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                                fontSize: '1.1rem',
                                 color: isExpanded ? 'var(--white)' : 'var(--black)',
                                 transform: isExpanded ? 'rotate(45deg)' : 'none',
                                 transition: 'transform 0.35s, color 0.2s',
@@ -1027,12 +1026,12 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/ProjectCard.tsx",
-                            lineNumber: 162,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 152,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1048,244 +1047,176 @@ function ProjectCard({ project, isExpanded, onToggle }) {
                     transition: 'max-height 0.8s cubic-bezier(0.16,1,0.3,1)',
                     borderTop: isExpanded ? '1px solid var(--black)' : 'none'
                 },
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        style: {
-                            background: 'var(--off-white)',
-                            padding: 'clamp(1rem, 3vw, 1.5rem) clamp(1rem, 4vw, 2rem)',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '1.5px'
-                        },
-                        children: [
-                            isBathHouse && panelItems.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
-                                title: "Showcase Panels — Side by Side",
-                                symbol: "□",
-                                count: panelItems.length,
-                                large: true,
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ThreePanelsSideBySide, {
-                                    items: panelItems
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    style: {
+                        background: 'var(--off-white)',
+                        padding: '1.5rem 2rem',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '1.5px'
+                    },
+                    children: [
+                        isBathHouse && panelItems.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
+                            title: "Showcase Panels — Side by Side",
+                            symbol: "□",
+                            count: panelItems.length,
+                            large: true,
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ThreePanelsSideBySide, {
+                                items: panelItems
+                            }, void 0, false, {
+                                fileName: "[project]/components/ProjectCard.tsx",
+                                lineNumber: 121,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/components/ProjectCard.tsx",
+                            lineNumber: 120,
+                            columnNumber: 13
+                        }, this),
+                        isMidRise && (groups['Drawings'] || groups['Art Progression']) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            style: {
+                                display: 'grid',
+                                gridTemplateColumns: '1fr 1fr',
+                                gap: '1.5px'
+                            },
+                            children: [
+                                groups['Drawings'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
+                                    title: "Drawings",
+                                    symbol: "□",
+                                    count: groups['Drawings'].length,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
+                                        items: groups['Drawings'],
+                                        interval: 5200,
+                                        useContain: true,
+                                        height: 500
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ProjectCard.tsx",
+                                        lineNumber: 130,
+                                        columnNumber: 19
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 187,
-                                    columnNumber: 15
+                                    lineNumber: 129,
+                                    columnNumber: 17
+                                }, this),
+                                groups['Art Progression'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
+                                    title: "Art Progression",
+                                    symbol: "×",
+                                    count: groups['Art Progression'].length,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
+                                        items: groups['Art Progression'],
+                                        interval: 6800,
+                                        useContain: true,
+                                        height: 500
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ProjectCard.tsx",
+                                        lineNumber: 135,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/components/ProjectCard.tsx",
+                                    lineNumber: 134,
+                                    columnNumber: 17
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 186,
-                                columnNumber: 13
-                            }, this),
-                            isMidRise && (groups['Drawings'] || groups['Art Progression']) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mid-rise-grid",
-                                style: {
-                                    display: 'grid',
-                                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))',
-                                    gap: '1.5px'
-                                },
-                                children: [
-                                    groups['Drawings'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
-                                        title: "Drawings",
-                                        symbol: "□",
-                                        count: groups['Drawings'].length,
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
-                                            items: groups['Drawings'],
-                                            interval: 5200,
-                                            useContain: true,
-                                            height: 500
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/ProjectCard.tsx",
-                                            lineNumber: 200,
-                                            columnNumber: 19
-                                        }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/ProjectCard.tsx",
+                            lineNumber: 127,
+                            columnNumber: 13
+                        }, this),
+                        subFrameCategories.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            style: {
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+                                gap: '1.5px'
+                            },
+                            children: subFrameCategories.map((cat, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
+                                    title: cat,
+                                    symbol: SYM[cat] || '×',
+                                    count: groups[cat].length,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
+                                        items: groups[cat],
+                                        interval: FRAME_INTERVALS[idx % FRAME_INTERVALS.length],
+                                        useContain: CONTAIN_CATS.has(cat)
                                     }, void 0, false, {
                                         fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 199,
-                                        columnNumber: 17
-                                    }, this),
-                                    groups['Art Progression'] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
-                                        title: "Art Progression",
-                                        symbol: "×",
-                                        count: groups['Art Progression'].length,
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
-                                            items: groups['Art Progression'],
-                                            interval: 6800,
-                                            useContain: true,
-                                            height: 500
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/ProjectCard.tsx",
-                                            lineNumber: 205,
-                                            columnNumber: 19
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 204,
-                                        columnNumber: 17
+                                        lineNumber: 146,
+                                        columnNumber: 19
                                     }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 193,
-                                columnNumber: 13
-                            }, this),
-                            !isBathHouse && !isMidRise && subFrameCategories.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "folders-grid",
-                                style: {
-                                    display: 'grid',
-                                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
-                                    gap: '1.5px'
-                                },
-                                children: subFrameCategories.map((cat, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
-                                        title: cat,
-                                        symbol: SYM[cat] || '×',
-                                        count: groups[cat].length,
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
-                                            items: groups[cat],
-                                            interval: FRAME_INTERVALS[idx % FRAME_INTERVALS.length],
-                                            useContain: CONTAIN_CATS.has(cat)
-                                        }, void 0, false, {
+                                }, cat, false, {
+                                    fileName: "[project]/components/ProjectCard.tsx",
+                                    lineNumber: 145,
+                                    columnNumber: 17
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/components/ProjectCard.tsx",
+                            lineNumber: 143,
+                            columnNumber: 13
+                        }, this),
+                        project.longDescription && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            style: {
+                                padding: '1.25rem 1.25rem',
+                                borderTop: '1px solid var(--gray-100)',
+                                marginTop: '0.5rem',
+                                display: 'grid',
+                                gridTemplateColumns: project.titleImage ? '1fr auto' : '1fr',
+                                gap: '2rem',
+                                alignItems: 'start'
+                            },
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: project.longDescription.split('\n\n').map((para, i, arr)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            style: {
+                                                fontFamily: 'var(--font-mono)',
+                                                fontWeight: 300,
+                                                fontSize: '0.72rem',
+                                                lineHeight: 1.85,
+                                                color: 'var(--gray-700)',
+                                                maxWidth: '760px',
+                                                marginBottom: i < arr.length - 1 ? '0.9rem' : 0
+                                            },
+                                            children: para.trim()
+                                        }, i, false, {
                                             fileName: "[project]/components/ProjectCard.tsx",
-                                            lineNumber: 220,
+                                            lineNumber: 161,
                                             columnNumber: 19
-                                        }, this)
-                                    }, cat, false, {
-                                        fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 219,
-                                        columnNumber: 17
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 213,
-                                columnNumber: 13
-                            }, this),
-                            (isBathHouse || isMidRise) && subFrameCategories.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "folders-grid",
-                                style: {
-                                    display: 'grid',
-                                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
-                                    gap: '1.5px'
-                                },
-                                children: subFrameCategories.map((cat, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FolderWindow, {
-                                        title: cat,
-                                        symbol: SYM[cat] || '×',
-                                        count: groups[cat].length,
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AutoImageGrid, {
-                                            items: groups[cat],
-                                            interval: FRAME_INTERVALS[idx % FRAME_INTERVALS.length],
-                                            useContain: CONTAIN_CATS.has(cat)
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/ProjectCard.tsx",
-                                            lineNumber: 235,
-                                            columnNumber: 19
-                                        }, this)
-                                    }, cat, false, {
-                                        fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 234,
-                                        columnNumber: 17
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 228,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 176,
-                        columnNumber: 9
-                    }, this),
-                    project.longDescription && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "project-description-grid",
-                        style: {
-                            background: 'var(--white)',
-                            borderTop: '1px solid var(--black)',
-                            padding: 'clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 3rem)',
-                            display: 'grid',
-                            gridTemplateColumns: project.titleImage ? '1fr 1fr' : '1fr',
-                            gap: 'clamp(2rem, 4vw, 3rem)',
-                            alignItems: 'start'
-                        },
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "label",
-                                        style: {
-                                            marginBottom: '1rem'
-                                        },
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                style: {
-                                                    color: 'var(--beige-dark)',
-                                                    marginRight: '0.5rem'
-                                                },
-                                                children: "○"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/ProjectCard.tsx",
-                                                lineNumber: 255,
-                                                columnNumber: 17
-                                            }, this),
-                                            "Project Description"
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 254,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        style: {
-                                            fontFamily: 'var(--font-mono)',
-                                            fontSize: 'clamp(0.7rem, 1.5vw, 0.8rem)',
-                                            lineHeight: 1.8,
-                                            color: 'var(--gray-700)',
-                                            whiteSpace: 'pre-wrap'
-                                        },
-                                        children: project.longDescription
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/ProjectCard.tsx",
-                                        lineNumber: 257,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 253,
-                                columnNumber: 13
-                            }, this),
-                            project.titleImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                style: {
-                                    position: 'relative',
-                                    width: '100%',
-                                    border: '1px solid var(--black)'
-                                },
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "[project]/components/ProjectCard.tsx",
+                                    lineNumber: 159,
+                                    columnNumber: 15
+                                }, this),
+                                project.titleImage && // eslint-disable-next-line @next/next/no-img-element
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: project.titleImage,
-                                    alt: `${project.title} overview`,
+                                    alt: "Project title",
                                     style: {
-                                        width: '100%',
+                                        width: '280px',
+                                        flexShrink: 0,
                                         display: 'block',
-                                        objectFit: 'cover'
+                                        border: '1px solid var(--gray-100)'
                                     },
                                     onError: (e)=>e.currentTarget.style.display = 'none'
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 270,
+                                    lineNumber: 168,
                                     columnNumber: 17
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 268,
-                                columnNumber: 15
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 244,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/ProjectCard.tsx",
+                            lineNumber: 158,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/ProjectCard.tsx",
+                    lineNumber: 116,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 175,
+                lineNumber: 115,
                 columnNumber: 7
             }, this)
         ]
@@ -1295,33 +1226,60 @@ function ProjectCard({ project, isExpanded, onToggle }) {
         columnNumber: 5
     }, this);
 }
-// ── Folder window frame ──────────────────────────────────────────────────────
+// ── Folder window chrome ──────────────────────────────────────────────────────
 function FolderWindow({ title, symbol, count, children, large }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: {
             border: '1px solid var(--black)',
-            background: 'var(--white)',
-            overflow: 'hidden'
+            background: 'var(--white)'
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
-                    background: 'var(--gray-50)',
-                    borderBottom: '1px solid var(--black)',
-                    padding: 'clamp(0.3rem, 1.5vw, 0.4rem) clamp(0.4rem, 2vw, 0.6rem)',
                     display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    gap: '0.55rem',
+                    padding: '0.4rem 0.65rem',
+                    borderBottom: '1px solid var(--black)',
+                    background: 'var(--black)'
                 },
                 children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            display: 'flex',
+                            gap: '4px'
+                        },
+                        children: [
+                            0,
+                            1,
+                            2
+                        ].map((i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    width: 7,
+                                    height: 7,
+                                    borderRadius: '50%',
+                                    background: 'var(--gray-700)',
+                                    border: '1px solid #2a2a2a'
+                                }
+                            }, i, false, {
+                                fileName: "[project]/components/ProjectCard.tsx",
+                                lineNumber: 192,
+                                columnNumber: 31
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/components/ProjectCard.tsx",
+                        lineNumber: 191,
+                        columnNumber: 9
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         style: {
                             fontFamily: 'var(--font-mono)',
-                            fontSize: large ? 'clamp(0.5rem, 1.2vw, 0.62rem)' : 'clamp(0.45rem, 1vw, 0.52rem)',
-                            letterSpacing: '0.08em',
+                            fontSize: large ? '0.58rem' : '0.5rem',
+                            letterSpacing: '0.12em',
                             textTransform: 'uppercase',
-                            color: 'var(--black)',
-                            fontWeight: 500
+                            color: 'var(--beige-dark)',
+                            flex: 1,
+                            fontWeight: large ? 500 : 400
                         },
                         children: [
                             symbol,
@@ -1330,13 +1288,13 @@ function FolderWindow({ title, symbol, count, children, large }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 299,
+                        lineNumber: 194,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         style: {
                             fontFamily: 'var(--font-mono)',
-                            fontSize: 'clamp(0.4rem, 0.9vw, 0.44rem)',
+                            fontSize: '0.44rem',
                             color: 'var(--gray-600)',
                             letterSpacing: '0.08em'
                         },
@@ -1347,36 +1305,35 @@ function FolderWindow({ title, symbol, count, children, large }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 309,
+                        lineNumber: 197,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 291,
+                lineNumber: 190,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 318,
+                lineNumber: 201,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ProjectCard.tsx",
-        lineNumber: 290,
+        lineNumber: 189,
         columnNumber: 5
     }, this);
 }
-// ── 3 panels side by side (responsive) ───────────────────────────────────────
+// ── 3 panels side by side ─────────────────────────────────────────────────────
 function ThreePanelsSideBySide({ items }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "panels-grid",
         style: {
             display: 'grid',
-            gridTemplateColumns: `repeat(auto-fit, minmax(min(100%, 300px), 1fr))`,
+            gridTemplateColumns: `repeat(${Math.min(items.length, 3)}, 1fr)`,
             gap: 0
         },
         children: items.map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1413,21 +1370,21 @@ function ThreePanelsSideBySide({ items }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 338,
+                        lineNumber: 213,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
                             position: 'absolute',
-                            top: 'clamp(0.3rem, 1vw, 0.5rem)',
-                            left: 'clamp(0.3rem, 1vw, 0.5rem)',
+                            top: '0.5rem',
+                            left: '0.5rem',
                             background: 'rgba(0,0,0,0.55)',
                             padding: '0.15rem 0.4rem'
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             style: {
                                 fontFamily: 'var(--font-mono)',
-                                fontSize: 'clamp(0.38rem, 0.9vw, 0.42rem)',
+                                fontSize: '0.42rem',
                                 letterSpacing: '0.12em',
                                 color: 'rgba(255,255,255,0.8)',
                                 textTransform: 'uppercase'
@@ -1438,23 +1395,23 @@ function ThreePanelsSideBySide({ items }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ProjectCard.tsx",
-                            lineNumber: 364,
+                            lineNumber: 233,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 357,
+                        lineNumber: 232,
                         columnNumber: 11
                     }, this)
                 ]
             }, i, true, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 332,
+                lineNumber: 211,
                 columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "[project]/components/ProjectCard.tsx",
-        lineNumber: 326,
+        lineNumber: 209,
         columnNumber: 5
     }, this);
 }
@@ -1543,7 +1500,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                         onError: (e)=>e.currentTarget.style.opacity = '0'
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 430,
+                        lineNumber: 287,
                         columnNumber: 9
                     }, this),
                     pending !== null && // eslint-disable-next-line @next/next/no-img-element
@@ -1563,7 +1520,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                         onError: (e)=>e.currentTarget.style.opacity = '0'
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 436,
+                        lineNumber: 293,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1572,7 +1529,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                             bottom: 0,
                             left: 0,
                             right: 0,
-                            padding: 'clamp(0.25rem, 1vw, 0.35rem) clamp(0.4rem, 1.5vw, 0.55rem)',
+                            padding: '0.35rem 0.55rem',
                             background: 'linear-gradient(transparent, rgba(0,0,0,0.45))',
                             pointerEvents: 'none',
                             zIndex: 5
@@ -1580,7 +1537,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             style: {
                                 fontFamily: 'var(--font-mono)',
-                                fontSize: 'clamp(0.38rem, 0.9vw, 0.42rem)',
+                                fontSize: '0.42rem',
                                 letterSpacing: '0.09em',
                                 textTransform: 'uppercase',
                                 color: 'rgba(255,255,255,0.65)'
@@ -1594,12 +1551,12 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ProjectCard.tsx",
-                            lineNumber: 451,
+                            lineNumber: 299,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 441,
+                        lineNumber: 298,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1615,7 +1572,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 461,
+                        lineNumber: 303,
                         columnNumber: 9
                     }, this),
                     items.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1630,36 +1587,46 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                                     left: 0,
                                     top: 0,
                                     bottom: 0,
-                                    width: '28%',
-                                    background: 'transparent',
+                                    width: '25%',
+                                    background: 'linear-gradient(to right, rgba(0,0,0,0.2), transparent)',
                                     border: 'none',
                                     cursor: 'pointer',
-                                    opacity: 0,
-                                    transition: 'opacity 0.2s',
+                                    opacity: 0.6,
+                                    transition: 'opacity 0.25s ease',
                                     display: 'flex',
                                     alignItems: 'center',
-                                    paddingLeft: '0.3rem',
+                                    paddingLeft: 'clamp(0.75rem, 3vw, 1.5rem)',
                                     zIndex: 7
                                 },
                                 onMouseEnter: (e)=>e.currentTarget.style.opacity = '1',
-                                onMouseLeave: (e)=>e.currentTarget.style.opacity = '0',
+                                onMouseLeave: (e)=>e.currentTarget.style.opacity = '0.6',
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     style: {
                                         fontFamily: 'var(--font-mono)',
-                                        fontSize: 'clamp(0.6rem, 1.5vw, 0.7rem)',
-                                        background: 'var(--black)',
+                                        fontSize: 'clamp(2rem, 4vw, 3rem)',
                                         color: 'var(--white)',
-                                        padding: '0.1rem 0.28rem'
+                                        fontWeight: 300,
+                                        lineHeight: 1,
+                                        textShadow: '0 0 8px rgba(0,0,0,0.8), 0 0 16px rgba(0,0,0,0.6)',
+                                        transition: 'transform 0.2s ease, text-shadow 0.2s ease'
                                     },
-                                    children: "←"
+                                    onMouseEnter: (e)=>{
+                                        e.currentTarget.style.transform = 'translateX(-4px)';
+                                        e.currentTarget.style.textShadow = '0 0 12px rgba(0,0,0,1), 0 0 24px rgba(0,0,0,0.8)';
+                                    },
+                                    onMouseLeave: (e)=>{
+                                        e.currentTarget.style.transform = 'translateX(0)';
+                                        e.currentTarget.style.textShadow = '0 0 8px rgba(0,0,0,0.8), 0 0 16px rgba(0,0,0,0.6)';
+                                    },
+                                    children: '<'
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 467,
+                                    lineNumber: 325,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 464,
+                                lineNumber: 306,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1672,37 +1639,47 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                                     right: 0,
                                     top: 0,
                                     bottom: 0,
-                                    width: '28%',
-                                    background: 'transparent',
+                                    width: '25%',
+                                    background: 'linear-gradient(to left, rgba(0,0,0,0.2), transparent)',
                                     border: 'none',
                                     cursor: 'pointer',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'flex-end',
-                                    paddingRight: '0.3rem',
-                                    opacity: 0,
-                                    transition: 'opacity 0.2s',
+                                    paddingRight: 'clamp(0.75rem, 3vw, 1.5rem)',
+                                    opacity: 0.6,
+                                    transition: 'opacity 0.25s ease',
                                     zIndex: 7
                                 },
                                 onMouseEnter: (e)=>e.currentTarget.style.opacity = '1',
-                                onMouseLeave: (e)=>e.currentTarget.style.opacity = '0',
+                                onMouseLeave: (e)=>e.currentTarget.style.opacity = '0.6',
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     style: {
                                         fontFamily: 'var(--font-mono)',
-                                        fontSize: 'clamp(0.6rem, 1.5vw, 0.7rem)',
-                                        background: 'var(--black)',
+                                        fontSize: 'clamp(2rem, 4vw, 3rem)',
                                         color: 'var(--white)',
-                                        padding: '0.1rem 0.28rem'
+                                        fontWeight: 300,
+                                        lineHeight: 1,
+                                        textShadow: '0 0 8px rgba(0,0,0,0.8), 0 0 16px rgba(0,0,0,0.6)',
+                                        transition: 'transform 0.2s ease, text-shadow 0.2s ease'
                                     },
-                                    children: "→"
+                                    onMouseEnter: (e)=>{
+                                        e.currentTarget.style.transform = 'translateX(4px)';
+                                        e.currentTarget.style.textShadow = '0 0 12px rgba(0,0,0,1), 0 0 24px rgba(0,0,0,0.8)';
+                                    },
+                                    onMouseLeave: (e)=>{
+                                        e.currentTarget.style.transform = 'translateX(0)';
+                                        e.currentTarget.style.textShadow = '0 0 8px rgba(0,0,0,0.8), 0 0 16px rgba(0,0,0,0.6)';
+                                    },
+                                    children: '>'
                                 }, void 0, false, {
                                     fileName: "[project]/components/ProjectCard.tsx",
-                                    lineNumber: 478,
+                                    lineNumber: 363,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ProjectCard.tsx",
-                                lineNumber: 475,
+                                lineNumber: 343,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -1710,7 +1687,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 422,
+                lineNumber: 285,
                 columnNumber: 7
             }, this),
             items.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1719,7 +1696,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                     justifyContent: 'center',
                     alignItems: 'center',
                     gap: '3px',
-                    padding: 'clamp(0.25rem, 1vw, 0.3rem)',
+                    padding: '0.3rem',
                     borderTop: '1px solid var(--gray-100)'
                 },
                 children: items.map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1738,35 +1715,20 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }) {
                         }
                     }, i, false, {
                         fileName: "[project]/components/ProjectCard.tsx",
-                        lineNumber: 499,
+                        lineNumber: 387,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/ProjectCard.tsx",
-                lineNumber: 490,
+                lineNumber: 385,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ProjectCard.tsx",
-        lineNumber: 421,
+        lineNumber: 284,
         columnNumber: 5
     }, this);
-}
-// Add responsive styles for description grid
-if (typeof document !== 'undefined') {
-    const style = document.createElement('style');
-    style.textContent = `
-    @media(max-width: 768px) {
-      .project-description-grid {
-        grid-template-columns: 1fr !important;
-      }
-    }
-  `;
-    if (!document.getElementById('project-card-responsive-styles')) {
-        style.id = 'project-card-responsive-styles';
-        document.head.appendChild(style);
-    }
 }
 }),
 "[project]/components/ProjectTimeline.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
@@ -2066,7 +2028,7 @@ function About() {
         style: {
             background: 'var(--black)',
             color: 'var(--white)',
-            padding: '6rem 3rem',
+            padding: 'clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 3rem)',
             borderTop: '1px solid var(--black)'
         },
         children: [
@@ -2074,11 +2036,13 @@ function About() {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
                         borderBottom: '1px solid var(--gray-700)',
-                        paddingBottom: '3rem',
-                        marginBottom: '3rem',
+                        paddingBottom: 'clamp(2rem, 4vw, 3rem)',
+                        marginBottom: 'clamp(2rem, 4vw, 3rem)',
                         display: 'flex',
                         alignItems: 'flex-start',
-                        justifyContent: 'space-between'
+                        justifyContent: 'space-between',
+                        flexWrap: 'wrap',
+                        gap: '1rem'
                     },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2091,14 +2055,14 @@ function About() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     style: {
                                         fontFamily: 'var(--font-mono)',
-                                        fontSize: '1.5rem',
+                                        fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
                                         color: 'var(--gray-700)',
                                         fontWeight: 300
                                     },
                                     children: "×"
                                 }, void 0, false, {
                                     fileName: "[project]/components/About.tsx",
-                                    lineNumber: 10,
+                                    lineNumber: 24,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2112,14 +2076,14 @@ function About() {
                                             children: "About"
                                         }, void 0, false, {
                                             fileName: "[project]/components/About.tsx",
-                                            lineNumber: 12,
+                                            lineNumber: 31,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             style: {
                                                 fontFamily: 'var(--font-mono)',
                                                 fontWeight: 700,
-                                                fontSize: 'clamp(1.8rem,3vw,3.5rem)',
+                                                fontSize: 'clamp(1.5rem, 4vw, 3.5rem)',
                                                 letterSpacing: '-0.03em',
                                                 lineHeight: 1,
                                                 color: 'var(--white)'
@@ -2127,25 +2091,25 @@ function About() {
                                             children: "ABOUT ME"
                                         }, void 0, false, {
                                             fileName: "[project]/components/About.tsx",
-                                            lineNumber: 13,
+                                            lineNumber: 32,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/About.tsx",
-                                    lineNumber: 11,
+                                    lineNumber: 30,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/About.tsx",
-                            lineNumber: 9,
+                            lineNumber: 23,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
                                 fontFamily: 'var(--font-mono)',
-                                fontSize: '3rem',
+                                fontSize: 'clamp(2rem, 5vw, 3rem)',
                                 color: 'var(--gray-800)',
                                 userSelect: 'none',
                                 lineHeight: 1
@@ -2153,25 +2117,26 @@ function About() {
                             children: "○"
                         }, void 0, false, {
                             fileName: "[project]/components/About.tsx",
-                            lineNumber: 18,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/About.tsx",
-                    lineNumber: 8,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/About.tsx",
-                lineNumber: 7,
+                lineNumber: 12,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "about-grid",
                 style: {
                     display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: '4rem'
+                    gridTemplateColumns: '1fr',
+                    gap: 'clamp(2rem, 5vw, 4rem)'
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ScrollReveal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollReveal"], {
@@ -2182,21 +2147,21 @@ function About() {
                                 style: {
                                     fontFamily: 'var(--font-mono)',
                                     fontWeight: 300,
-                                    fontSize: '0.8rem',
+                                    fontSize: 'clamp(0.7rem, 1.6vw, 0.8rem)',
                                     lineHeight: 1.9,
                                     color: 'var(--gray-300)'
                                 },
                                 children: "I am an architectural design student exploring the intersection of spatial theory and built form. My work engages questions of threshold, material honesty, and the social dimensions of architecture — from intimate residential scales to civic programs."
                             }, void 0, false, {
                                 fileName: "[project]/components/About.tsx",
-                                lineNumber: 24,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 style: {
                                     fontFamily: 'var(--font-mono)',
                                     fontWeight: 300,
-                                    fontSize: '0.8rem',
+                                    fontSize: 'clamp(0.7rem, 1.6vw, 0.8rem)',
                                     lineHeight: 1.9,
                                     color: 'var(--gray-500)',
                                     marginTop: '1rem'
@@ -2205,20 +2170,20 @@ function About() {
                                     "// currently enrolled at Texas A&M University",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/components/About.tsx",
-                                        lineNumber: 30,
+                                        lineNumber: 79,
                                         columnNumber: 58
                                     }, this),
                                     "// Bachelor of Architecture candidate"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/About.tsx",
-                                lineNumber: 29,
+                                lineNumber: 71,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/About.tsx",
-                        lineNumber: 23,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ScrollReveal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollReveal"], {
@@ -2252,8 +2217,9 @@ function About() {
                                         justifyContent: 'space-between',
                                         alignItems: 'baseline',
                                         borderBottom: '1px solid var(--gray-800)',
-                                        padding: '0.8rem 0',
-                                        gap: '1rem'
+                                        padding: 'clamp(0.6rem, 1.5vw, 0.8rem) 0',
+                                        gap: '1rem',
+                                        flexWrap: 'wrap'
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2271,49 +2237,62 @@ function About() {
                                                     children: "○"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/About.tsx",
-                                                    lineNumber: 45,
+                                                    lineNumber: 102,
                                                     columnNumber: 19
                                                 }, this),
                                                 k
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/About.tsx",
-                                            lineNumber: 44,
+                                            lineNumber: 101,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             style: {
                                                 fontFamily: 'var(--font-mono)',
-                                                fontSize: '0.7rem',
+                                                fontSize: 'clamp(0.65rem, 1.4vw, 0.7rem)',
                                                 color: 'var(--white)',
                                                 textAlign: 'right'
                                             },
                                             children: v
                                         }, void 0, false, {
                                             fileName: "[project]/components/About.tsx",
-                                            lineNumber: 47,
+                                            lineNumber: 104,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, k, true, {
                                     fileName: "[project]/components/About.tsx",
-                                    lineNumber: 43,
+                                    lineNumber: 92,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/About.tsx",
-                            lineNumber: 36,
+                            lineNumber: 85,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/About.tsx",
-                        lineNumber: 35,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/About.tsx",
-                lineNumber: 22,
+                lineNumber: 54,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
+                children: `
+        @media(min-width: 769px) {
+          .about-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+        }
+      `
+            }, void 0, false, {
+                fileName: "[project]/components/About.tsx",
+                lineNumber: 116,
                 columnNumber: 7
             }, this)
         ]
@@ -2346,12 +2325,13 @@ function Contact() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ScrollReveal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollReveal"], {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "contact-grid",
                     style: {
-                        padding: '6rem 3rem',
+                        padding: 'clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 3rem)',
                         borderBottom: '1px solid var(--black)',
                         display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
-                        gap: '6rem',
+                        gridTemplateColumns: '1fr',
+                        gap: 'clamp(3rem, 6vw, 6rem)',
                         alignItems: 'end'
                     },
                     children: [
@@ -2362,20 +2342,20 @@ function Contact() {
                                         display: 'flex',
                                         alignItems: 'baseline',
                                         gap: '1rem',
-                                        marginBottom: '2rem'
+                                        marginBottom: 'clamp(1.5rem, 3vw, 2rem)'
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             style: {
                                                 fontFamily: 'var(--font-mono)',
-                                                fontSize: '1.5rem',
+                                                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
                                                 color: 'var(--gray-200)',
                                                 fontWeight: 300
                                             },
                                             children: "□"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Contact.tsx",
-                                            lineNumber: 11,
+                                            lineNumber: 23,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2388,40 +2368,40 @@ function Contact() {
                                                     children: "Contact"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Contact.tsx",
-                                                    lineNumber: 13,
+                                                    lineNumber: 30,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                                     style: {
                                                         fontFamily: 'var(--font-mono)',
                                                         fontWeight: 700,
-                                                        fontSize: 'clamp(1.8rem,3vw,3.5rem)',
+                                                        fontSize: 'clamp(1.5rem, 4vw, 3.5rem)',
                                                         letterSpacing: '-0.03em',
                                                         lineHeight: 1
                                                     },
                                                     children: "GET_IN_TOUCH"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Contact.tsx",
-                                                    lineNumber: 14,
+                                                    lineNumber: 31,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Contact.tsx",
-                                            lineNumber: 12,
+                                            lineNumber: 29,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Contact.tsx",
-                                    lineNumber: 10,
+                                    lineNumber: 17,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     style: {
                                         fontFamily: 'var(--font-mono)',
                                         fontWeight: 300,
-                                        fontSize: '0.75rem',
+                                        fontSize: 'clamp(0.7rem, 1.5vw, 0.75rem)',
                                         lineHeight: 1.9,
                                         color: 'var(--gray-500)',
                                         maxWidth: '320px'
@@ -2430,27 +2410,27 @@ function Contact() {
                                         "// open to internships, collaborations,",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/components/Contact.tsx",
-                                            lineNumber: 20,
+                                            lineNumber: 50,
                                             columnNumber: 54
                                         }, this),
                                         "// and design conversations."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Contact.tsx",
-                                    lineNumber: 19,
+                                    lineNumber: 42,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Contact.tsx",
-                            lineNumber: 9,
+                            lineNumber: 16,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
                                 display: 'flex',
                                 flexDirection: 'column',
-                                gap: '2rem'
+                                gap: 'clamp(1.5rem, 3vw, 2rem)'
                             },
                             children: [
                                 {
@@ -2476,7 +2456,7 @@ function Contact() {
                             ].map(({ label, value, href })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
                                         borderBottom: '1px solid var(--gray-100)',
-                                        paddingBottom: '1rem'
+                                        paddingBottom: 'clamp(0.75rem, 2vw, 1rem)'
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2487,7 +2467,7 @@ function Contact() {
                                             children: label
                                         }, void 0, false, {
                                             fileName: "[project]/components/Contact.tsx",
-                                            lineNumber: 33,
+                                            lineNumber: 66,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2496,28 +2476,29 @@ function Contact() {
                                             style: {
                                                 fontFamily: 'var(--font-mono)',
                                                 fontWeight: 400,
-                                                fontSize: '0.8rem',
+                                                fontSize: 'clamp(0.7rem, 1.6vw, 0.8rem)',
                                                 color: 'var(--black)',
                                                 textDecoration: 'none',
-                                                transition: 'color 0.2s'
+                                                transition: 'color 0.2s',
+                                                wordBreak: 'break-word'
                                             },
                                             onMouseEnter: (e)=>e.currentTarget.style.color = 'var(--beige-dark)',
                                             onMouseLeave: (e)=>e.currentTarget.style.color = 'var(--black)',
                                             children: value
                                         }, void 0, false, {
                                             fileName: "[project]/components/Contact.tsx",
-                                            lineNumber: 34,
+                                            lineNumber: 67,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, label, true, {
                                     fileName: "[project]/components/Contact.tsx",
-                                    lineNumber: 32,
+                                    lineNumber: 62,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/Contact.tsx",
-                            lineNumber: 25,
+                            lineNumber: 55,
                             columnNumber: 11
                         }, this)
                     ]
@@ -2533,35 +2514,37 @@ function Contact() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
-                    padding: '1.5rem 3rem',
+                    padding: 'clamp(1rem, 3vw, 1.5rem) clamp(1.5rem, 5vw, 3rem)',
                     display: 'flex',
                     justifyContent: 'space-between',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                    gap: '1rem'
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         style: {
                             fontFamily: 'var(--font-mono)',
-                            fontSize: '0.65rem',
+                            fontSize: 'clamp(0.6rem, 1.3vw, 0.65rem)',
                             fontWeight: 700,
                             letterSpacing: '0.08em'
                         },
                         children: "AP"
                     }, void 0, false, {
                         fileName: "[project]/components/Contact.tsx",
-                        lineNumber: 50,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         style: {
                             fontFamily: 'var(--font-mono)',
-                            fontSize: '0.7rem',
+                            fontSize: 'clamp(0.65rem, 1.4vw, 0.7rem)',
                             color: 'var(--gray-300)'
                         },
                         children: "○ □ ×"
                     }, void 0, false, {
                         fileName: "[project]/components/Contact.tsx",
-                        lineNumber: 51,
+                        lineNumber: 100,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2572,13 +2555,26 @@ function Contact() {
                         children: "© 2026"
                     }, void 0, false, {
                         fileName: "[project]/components/Contact.tsx",
-                        lineNumber: 52,
+                        lineNumber: 105,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Contact.tsx",
-                lineNumber: 49,
+                lineNumber: 86,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
+                children: `
+        @media(min-width: 769px) {
+          .contact-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+        }
+      `
+            }, void 0, false, {
+                fileName: "[project]/components/Contact.tsx",
+                lineNumber: 108,
                 columnNumber: 7
             }, this)
         ]

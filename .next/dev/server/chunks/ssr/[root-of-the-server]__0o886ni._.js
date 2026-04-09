@@ -35,6 +35,20 @@ function CustomCursor() {
                 x: e.clientX,
                 y: e.clientY
             };
+            // Check if cursor is over black background
+            const element = document.elementFromPoint(e.clientX, e.clientY);
+            if (element && dotRef.current && ringRef.current) {
+                const bgColor = window.getComputedStyle(element).backgroundColor;
+                // Check if background is black or if element is inside #about section
+                const isBlackBg = bgColor === 'rgb(0, 0, 0)' || element.closest('#about') !== null || element.closest('section[style*="background: var(--black)"]') !== null || element.closest('section[style*="background-color: var(--black)"]') !== null;
+                if (isBlackBg) {
+                    dotRef.current.classList.add('on-black');
+                    ringRef.current.classList.add('on-black');
+                } else {
+                    dotRef.current.classList.remove('on-black');
+                    ringRef.current.classList.remove('on-black');
+                }
+            }
         };
         const onEnter = ()=>ringRef.current?.classList.add('hovering');
         const onLeave = ()=>ringRef.current?.classList.remove('hovering');
@@ -80,7 +94,7 @@ function CustomCursor() {
                 className: "cursor-dot"
             }, void 0, false, {
                 fileName: "[project]/components/CustomCursor.tsx",
-                lineNumber: 59,
+                lineNumber: 79,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -88,7 +102,7 @@ function CustomCursor() {
                 className: "cursor-ring"
             }, void 0, false, {
                 fileName: "[project]/components/CustomCursor.tsx",
-                lineNumber: 60,
+                lineNumber: 80,
                 columnNumber: 7
             }, this)
         ]

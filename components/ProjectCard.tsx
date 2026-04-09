@@ -42,18 +42,10 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
   return (
     <div style={{ background: 'var(--white)', position: 'relative', zIndex: 1 }}>
 
-      {/* ── HEADER — responsive layout ── */}
+      {/* ── HEADER — fixed 260px height ── */}
       <div
         onClick={onToggle} data-hover
-        className="project-card-header"
-        style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'min(260px, 40vw) 1fr auto', 
-          alignItems: 'stretch', 
-          cursor: 'pointer', 
-          minHeight: '260px',
-          transition: 'box-shadow 0.2s ease, transform 0.2s ease' 
-        }}
+        style={{ display: 'grid', gridTemplateColumns: '260px 1fr auto', alignItems: 'stretch', cursor: 'pointer', height: '260px', transition: 'box-shadow 0.2s ease, transform 0.2s ease' }}
         onMouseEnter={(e) => {
           const el = e.currentTarget as HTMLDivElement;
           el.style.boxShadow = '4px 4px 0 var(--beige-dark)';
@@ -66,14 +58,7 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
         }}
       >
         {/* Cover image or GIF preview */}
-        <div style={{ 
-          minHeight: '260px', 
-          width: '100%', 
-          overflow: 'hidden', 
-          position: 'relative', 
-          background: 'var(--gray-50)', 
-          flexShrink: 0 
-        }}>
+        <div style={{ height: '260px', width: '260px', overflow: 'hidden', position: 'relative', background: 'var(--gray-50)', flexShrink: 0 }}>
           {coverSrc ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={coverSrc} alt={project.title}
@@ -95,14 +80,7 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
         </div>
 
         {/* Info */}
-        <div style={{ 
-          padding: 'clamp(1rem, 3vw, 1.75rem) clamp(1rem, 4vw, 2rem)', 
-          display: 'flex', 
-          flexDirection: 'column', 
-          justifyContent: 'space-between', 
-          borderLeft: '1px solid var(--black)', 
-          overflow: 'hidden' 
-        }}>
+        <div style={{ padding: '1.75rem 2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '1px solid var(--black)', overflow: 'hidden' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
               <span className="label">{project.semester}</span>
@@ -111,37 +89,16 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
                 <span key={t} style={{ fontFamily: 'var(--font-mono)', fontSize: '0.5rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--gray-500)', border: '1px solid var(--gray-300)', padding: '0.1rem 0.35rem' }}>{t}</span>
               ))}
             </div>
-            <h3 style={{ 
-              fontFamily: 'var(--font-mono)', 
-              fontWeight: 700, 
-              fontSize: 'clamp(1.2rem, 2vw, 2rem)', 
-              letterSpacing: '-0.03em', 
-              lineHeight: 1.05, 
-              marginBottom: '0.75rem', 
-              textTransform: 'uppercase' 
-            }}>
+            <h3 style={{ fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: 'clamp(1.2rem,2vw,2rem)', letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: '0.75rem', textTransform: 'uppercase' }}>
               {project.title}
             </h3>
-            <p style={{ 
-              fontFamily: 'var(--font-mono)', 
-              fontWeight: 300, 
-              fontSize: 'clamp(0.65rem, 1.5vw, 0.72rem)', 
-              lineHeight: 1.6, 
-              color: 'var(--gray-700)', 
-              maxWidth: '380px' 
-            }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontWeight: 300, fontSize: '0.72rem', lineHeight: 1.6, color: 'var(--gray-700)', maxWidth: '380px' }}>
               {project.shortDescription}
             </p>
           </div>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
             {categoryNames.map((cat) => (
-              <span key={cat} style={{ 
-                fontFamily: 'var(--font-mono)', 
-                fontSize: 'clamp(0.45rem, 1vw, 0.5rem)', 
-                letterSpacing: '0.06em', 
-                textTransform: 'uppercase', 
-                color: 'var(--gray-400)' 
-              }}>
+              <span key={cat} style={{ fontFamily: 'var(--font-mono)', fontSize: '0.5rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--gray-400)' }}>
                 {SYM[cat] || '×'} {cat} ({groups[cat].length})
               </span>
             ))}
@@ -149,37 +106,14 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
         </div>
 
         {/* Toggle */}
-        <div style={{ 
-          width: 'clamp(40px, 8vw, 52px)', 
-          borderLeft: '1px solid var(--black)', 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center', 
-          background: isExpanded ? 'var(--black)' : 'transparent', 
-          transition: 'background 0.2s', 
-          flexShrink: 0 
-        }}>
-          <span style={{ 
-            fontFamily: 'var(--font-mono)', 
-            fontSize: 'clamp(0.9rem, 2vw, 1.1rem)', 
-            color: isExpanded ? 'var(--white)' : 'var(--black)', 
-            transform: isExpanded ? 'rotate(45deg)' : 'none', 
-            transition: 'transform 0.35s, color 0.2s', 
-            display: 'block', 
-            lineHeight: 1 
-          }}>×</span>
+        <div style={{ width: '52px', borderLeft: '1px solid var(--black)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: isExpanded ? 'var(--black)' : 'transparent', transition: 'background 0.2s', flexShrink: 0 }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '1.1rem', color: isExpanded ? 'var(--white)' : 'var(--black)', transform: isExpanded ? 'rotate(45deg)' : 'none', transition: 'transform 0.35s, color 0.2s', display: 'block', lineHeight: 1 }}>×</span>
         </div>
       </div>
 
       {/* ── EXPANDED ── */}
       <div style={{ overflow: 'hidden', maxHeight: isExpanded ? '9999px' : '0', transition: 'max-height 0.8s cubic-bezier(0.16,1,0.3,1)', borderTop: isExpanded ? '1px solid var(--black)' : 'none' }}>
-        <div style={{ 
-          background: 'var(--off-white)', 
-          padding: 'clamp(1rem, 3vw, 1.5rem) clamp(1rem, 4vw, 2rem)', 
-          display: 'flex', 
-          flexDirection: 'column', 
-          gap: '1.5px' 
-        }}>
+        <div style={{ background: 'var(--off-white)', padding: '1.5rem 2rem', display: 'flex', flexDirection: 'column', gap: '1.5px' }}>
 
           {/* Bath House: 3 panels side by side */}
           {isBathHouse && panelItems.length > 0 && (
@@ -188,13 +122,9 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
             </FolderWindow>
           )}
 
-          {/* Mid Rise: responsive 2-col/1-col layout */}
+          {/* Mid Rise: large 2-col carousel layout */}
           {isMidRise && (groups['Drawings'] || groups['Art Progression']) && (
-            <div className="mid-rise-grid" style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', 
-              gap: '1.5px' 
-            }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5px' }}>
               {groups['Drawings'] && (
                 <FolderWindow title="Drawings" symbol="□" count={groups['Drawings'].length}>
                   <AutoImageGrid items={groups['Drawings']} interval={5200} useContain height={500} />
@@ -208,110 +138,63 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
             </div>
           )}
 
-          {/* All other projects: multi-folder layout */}
-          {!isBathHouse && !isMidRise && subFrameCategories.length > 0 && (
-            <div className="folders-grid" style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', 
-              gap: '1.5px' 
-            }}>
+          {/* Sub-frame grid */}
+          {subFrameCategories.length > 0 && (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.5px' }}>
               {subFrameCategories.map((cat, idx) => (
                 <FolderWindow key={cat} title={cat} symbol={SYM[cat] || '×'} count={groups[cat].length}>
-                  <AutoImageGrid items={groups[cat]} interval={FRAME_INTERVALS[idx % FRAME_INTERVALS.length]} useContain={CONTAIN_CATS.has(cat)} />
+                  <AutoImageGrid
+                    items={groups[cat]}
+                    interval={FRAME_INTERVALS[idx % FRAME_INTERVALS.length]}
+                    useContain={CONTAIN_CATS.has(cat)}
+                  />
                 </FolderWindow>
               ))}
             </div>
           )}
 
-          {/* Bath House & Mid Rise subfolder grids */}
-          {(isBathHouse || isMidRise) && subFrameCategories.length > 0 && (
-            <div className="folders-grid" style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', 
-              gap: '1.5px' 
-            }}>
-              {subFrameCategories.map((cat, idx) => (
-                <FolderWindow key={cat} title={cat} symbol={SYM[cat] || '×'} count={groups[cat].length}>
-                  <AutoImageGrid items={groups[cat]} interval={FRAME_INTERVALS[idx % FRAME_INTERVALS.length]} useContain={CONTAIN_CATS.has(cat)} />
-                </FolderWindow>
-              ))}
-            </div>
-          )}
-        </div>
-        
-        {/* Long Description Section - AFTER images */}
-        {project.longDescription && (
-          <div className="project-description-grid" style={{ 
-            background: 'var(--white)', 
-            borderTop: '1px solid var(--black)',
-            padding: 'clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 3rem)',
-            display: 'grid',
-            gridTemplateColumns: project.titleImage ? '1fr 1fr' : '1fr',
-            gap: 'clamp(2rem, 4vw, 3rem)',
-            alignItems: 'start'
-          }}>
-            <div>
-              <div className="label" style={{ marginBottom: '1rem' }}>
-                <span style={{ color: 'var(--beige-dark)', marginRight: '0.5rem' }}>○</span>Project Description
+          {/* Long description — with optional title image to the right */}
+          {project.longDescription && (
+            <div style={{ padding: '1.25rem 1.25rem', borderTop: '1px solid var(--gray-100)', marginTop: '0.5rem', display: 'grid', gridTemplateColumns: project.titleImage ? '1fr auto' : '1fr', gap: '2rem', alignItems: 'start' }}>
+              <div>
+                {project.longDescription.split('\n\n').map((para, i, arr) => (
+                  <p key={i} style={{ fontFamily: 'var(--font-mono)', fontWeight: 300, fontSize: '0.72rem', lineHeight: 1.85, color: 'var(--gray-700)', maxWidth: '760px', marginBottom: i < arr.length - 1 ? '0.9rem' : 0 }}>
+                    {para.trim()}
+                  </p>
+                ))}
               </div>
-              <div style={{ 
-                fontFamily: 'var(--font-mono)', 
-                fontSize: 'clamp(0.7rem, 1.5vw, 0.8rem)', 
-                lineHeight: 1.8, 
-                color: 'var(--gray-700)',
-                whiteSpace: 'pre-wrap'
-              }}>
-                {project.longDescription}
-              </div>
-            </div>
-            {project.titleImage && (
-              <div style={{ position: 'relative', width: '100%', border: '1px solid var(--black)' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
-                  src={project.titleImage} 
-                  alt={`${project.title} overview`}
-                  style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+              {project.titleImage && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={project.titleImage}
+                  alt="Project title"
+                  style={{ width: '280px', flexShrink: 0, display: 'block', border: '1px solid var(--gray-100)' }}
                   onError={(e) => ((e.currentTarget as HTMLImageElement).style.display = 'none')}
                 />
-              </div>
-            )}
-          </div>
-        )}
+              )}
+            </div>
+          )}
+
+        </div>
       </div>
     </div>
   );
 }
 
-// ── Folder window frame ──────────────────────────────────────────────────────
+// ── Folder window chrome ──────────────────────────────────────────────────────
 function FolderWindow({ title, symbol, count, children, large }: {
   title: string; symbol: string; count: number; children: React.ReactNode; large?: boolean;
 }) {
   return (
-    <div style={{ border: '1px solid var(--black)', background: 'var(--white)', overflow: 'hidden' }}>
-      <div style={{ 
-        background: 'var(--gray-50)', 
-        borderBottom: '1px solid var(--black)', 
-        padding: 'clamp(0.3rem, 1.5vw, 0.4rem) clamp(0.4rem, 2vw, 0.6rem)', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        alignItems: 'center' 
-      }}>
-        <span style={{ 
-          fontFamily: 'var(--font-mono)', 
-          fontSize: large ? 'clamp(0.5rem, 1.2vw, 0.62rem)' : 'clamp(0.45rem, 1vw, 0.52rem)', 
-          letterSpacing: '0.08em', 
-          textTransform: 'uppercase', 
-          color: 'var(--black)', 
-          fontWeight: 500 
-        }}>
+    <div style={{ border: '1px solid var(--black)', background: 'var(--white)' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem', padding: '0.4rem 0.65rem', borderBottom: '1px solid var(--black)', background: 'var(--black)' }}>
+        <div style={{ display: 'flex', gap: '4px' }}>
+          {[0,1,2].map((i) => <div key={i} style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--gray-700)', border: '1px solid #2a2a2a' }} />)}
+        </div>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: large ? '0.58rem' : '0.5rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--beige-dark)', flex: 1, fontWeight: large ? 500 : 400 }}>
           {symbol} {title}
         </span>
-        <span style={{ 
-          fontFamily: 'var(--font-mono)', 
-          fontSize: 'clamp(0.4rem, 0.9vw, 0.44rem)', 
-          color: 'var(--gray-600)', 
-          letterSpacing: '0.08em' 
-        }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.44rem', color: 'var(--gray-600)', letterSpacing: '0.08em' }}>
           {count} file{count !== 1 ? 's' : ''}
         </span>
       </div>
@@ -320,20 +203,12 @@ function FolderWindow({ title, symbol, count, children, large }: {
   );
 }
 
-// ── 3 panels side by side (responsive) ───────────────────────────────────────
+// ── 3 panels side by side ─────────────────────────────────────────────────────
 function ThreePanelsSideBySide({ items }: { items: MediaItem[] }) {
   return (
-    <div className="panels-grid" style={{ 
-      display: 'grid', 
-      gridTemplateColumns: `repeat(auto-fit, minmax(min(100%, 300px), 1fr))`, 
-      gap: 0 
-    }}>
+    <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(items.length, 3)}, 1fr)`, gap: 0 }}>
       {items.map((item, i) => (
-        <div key={i} style={{ 
-          position: 'relative', 
-          borderRight: i < items.length - 1 ? '1px solid var(--black)' : 'none', 
-          background: 'var(--white)' 
-        }}>
+        <div key={i} style={{ position: 'relative', borderRight: i < items.length - 1 ? '1px solid var(--black)' : 'none', background: 'var(--white)' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={item.src} alt={item.alt}
             style={{ width: '100%', display: 'block', objectFit: 'contain', background: 'var(--white)' }}
@@ -354,20 +229,8 @@ function ThreePanelsSideBySide({ items }: { items: MediaItem[] }) {
               }
             }}
           />
-          <div style={{ 
-            position: 'absolute', 
-            top: 'clamp(0.3rem, 1vw, 0.5rem)', 
-            left: 'clamp(0.3rem, 1vw, 0.5rem)', 
-            background: 'rgba(0,0,0,0.55)', 
-            padding: '0.15rem 0.4rem' 
-          }}>
-            <span style={{ 
-              fontFamily: 'var(--font-mono)', 
-              fontSize: 'clamp(0.38rem, 0.9vw, 0.42rem)', 
-              letterSpacing: '0.12em', 
-              color: 'rgba(255,255,255,0.8)', 
-              textTransform: 'uppercase' 
-            }}>
+          <div style={{ position: 'absolute', top: '0.5rem', left: '0.5rem', background: 'rgba(0,0,0,0.55)', padding: '0.15rem 0.4rem' }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.42rem', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.8)', textTransform: 'uppercase' }}>
               Panel {String(i + 1).padStart(2,'0')}
             </span>
           </div>
@@ -419,13 +282,7 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }: {
 
   return (
     <div>
-      <div style={{ 
-        position: 'relative', 
-        width: '100%', 
-        height: `${height}px`, 
-        overflow: 'hidden', 
-        background: useContain ? 'var(--white)' : 'var(--gray-50)' 
-      }}>
+      <div style={{ position: 'relative', width: '100%', height: `${height}px`, overflow: 'hidden', background: useContain ? 'var(--white)' : 'var(--gray-50)' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={items[current]?.src} alt={items[current]?.alt}
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: useContain ? 'contain' : 'cover', background: useContain ? 'var(--white)' : 'transparent', transform: `translateX(${exitX}) rotate(${rot}deg)`, transition: sliding ? 'transform 0.56s cubic-bezier(0.4,0,0.2,1)' : 'none' }}
@@ -438,23 +295,8 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }: {
             onError={(e) => ((e.currentTarget as HTMLImageElement).style.opacity = '0')}
           />
         )}
-        <div style={{ 
-          position: 'absolute', 
-          bottom: 0, 
-          left: 0, 
-          right: 0, 
-          padding: 'clamp(0.25rem, 1vw, 0.35rem) clamp(0.4rem, 1.5vw, 0.55rem)', 
-          background: 'linear-gradient(transparent, rgba(0,0,0,0.45))', 
-          pointerEvents: 'none', 
-          zIndex: 5 
-        }}>
-          <span style={{ 
-            fontFamily: 'var(--font-mono)', 
-            fontSize: 'clamp(0.38rem, 0.9vw, 0.42rem)', 
-            letterSpacing: '0.09em', 
-            textTransform: 'uppercase', 
-            color: 'rgba(255,255,255,0.65)' 
-          }}>
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '0.35rem 0.55rem', background: 'linear-gradient(transparent, rgba(0,0,0,0.45))', pointerEvents: 'none', zIndex: 5 }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.42rem', letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)' }}>
             {items[current]?.alt} · {String(current+1).padStart(2,'0')}/{String(items.length).padStart(2,'0')}
           </span>
         </div>
@@ -462,69 +304,91 @@ function AutoImageGrid({ items, interval, useContain, height = 220 }: {
         {items.length > 1 && (
           <>
             <button onClick={(e) => { e.stopPropagation(); go((current - 1 + items.length) % items.length, 'right'); }}
-              style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '28%', background: 'transparent', border: 'none', cursor: 'pointer', opacity: 0, transition: 'opacity 0.2s', display: 'flex', alignItems: 'center', paddingLeft: '0.3rem', zIndex: 7 }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')} onMouseLeave={(e) => (e.currentTarget.style.opacity = '0')}>
+              style={{ 
+                position: 'absolute', 
+                left: 0, 
+                top: 0, 
+                bottom: 0, 
+                width: '25%', 
+                background: 'linear-gradient(to right, rgba(0,0,0,0.2), transparent)', 
+                border: 'none', 
+                cursor: 'pointer', 
+                opacity: 0.6,
+                transition: 'opacity 0.25s ease', 
+                display: 'flex', 
+                alignItems: 'center', 
+                paddingLeft: 'clamp(0.75rem, 3vw, 1.5rem)', 
+                zIndex: 7 
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')} 
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.6')}>
               <span style={{ 
                 fontFamily: 'var(--font-mono)', 
-                fontSize: 'clamp(0.6rem, 1.5vw, 0.7rem)', 
-                background: 'var(--black)', 
+                fontSize: 'clamp(2rem, 4vw, 3rem)', 
                 color: 'var(--white)', 
-                padding: '0.1rem 0.28rem' 
-              }}>←</span>
+                fontWeight: 300,
+                lineHeight: 1,
+                textShadow: '0 0 8px rgba(0,0,0,0.8), 0 0 16px rgba(0,0,0,0.6)',
+                transition: 'transform 0.2s ease, text-shadow 0.2s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateX(-4px)';
+                e.currentTarget.style.textShadow = '0 0 12px rgba(0,0,0,1), 0 0 24px rgba(0,0,0,0.8)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateX(0)';
+                e.currentTarget.style.textShadow = '0 0 8px rgba(0,0,0,0.8), 0 0 16px rgba(0,0,0,0.6)';
+              }}>{'<'}</span>
             </button>
             <button onClick={(e) => { e.stopPropagation(); go((current + 1) % items.length, 'left'); }}
-              style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: '28%', background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', paddingRight: '0.3rem', opacity: 0, transition: 'opacity 0.2s', zIndex: 7 }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')} onMouseLeave={(e) => (e.currentTarget.style.opacity = '0')}>
+              style={{ 
+                position: 'absolute', 
+                right: 0, 
+                top: 0, 
+                bottom: 0, 
+                width: '25%', 
+                background: 'linear-gradient(to left, rgba(0,0,0,0.2), transparent)', 
+                border: 'none', 
+                cursor: 'pointer', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'flex-end', 
+                paddingRight: 'clamp(0.75rem, 3vw, 1.5rem)', 
+                opacity: 0.6,
+                transition: 'opacity 0.25s ease', 
+                zIndex: 7 
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')} 
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.6')}>
               <span style={{ 
                 fontFamily: 'var(--font-mono)', 
-                fontSize: 'clamp(0.6rem, 1.5vw, 0.7rem)', 
-                background: 'var(--black)', 
+                fontSize: 'clamp(2rem, 4vw, 3rem)', 
                 color: 'var(--white)', 
-                padding: '0.1rem 0.28rem' 
-              }}>→</span>
+                fontWeight: 300,
+                lineHeight: 1,
+                textShadow: '0 0 8px rgba(0,0,0,0.8), 0 0 16px rgba(0,0,0,0.6)',
+                transition: 'transform 0.2s ease, text-shadow 0.2s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateX(4px)';
+                e.currentTarget.style.textShadow = '0 0 12px rgba(0,0,0,1), 0 0 24px rgba(0,0,0,0.8)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateX(0)';
+                e.currentTarget.style.textShadow = '0 0 8px rgba(0,0,0,0.8), 0 0 16px rgba(0,0,0,0.6)';
+              }}>{'>'}</span>
             </button>
           </>
         )}
       </div>
       {items.length > 1 && (
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center', 
-          gap: '3px', 
-          padding: 'clamp(0.25rem, 1vw, 0.3rem)', 
-          borderTop: '1px solid var(--gray-100)' 
-        }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '3px', padding: '0.3rem', borderTop: '1px solid var(--gray-100)' }}>
           {items.map((_, i) => (
             <button key={i} onClick={(e) => { e.stopPropagation(); go(i, i > current ? 'left' : 'right'); }}
-              style={{ 
-                width: i === current ? 16 : 4, 
-                height: 3, 
-                border: 'none', 
-                background: i === current ? 'var(--black)' : 'var(--gray-300)', 
-                cursor: 'pointer', 
-                padding: 0, 
-                transition: 'width 0.35s ease, background 0.25s' 
-              }} />
+              style={{ width: i === current ? 16 : 4, height: 3, border: 'none', background: i === current ? 'var(--black)' : 'var(--gray-300)', cursor: 'pointer', padding: 0, transition: 'width 0.35s ease, background 0.25s' }} />
           ))}
         </div>
       )}
     </div>
   );
-}
-
-// Add responsive styles for description grid
-if (typeof document !== 'undefined') {
-  const style = document.createElement('style');
-  style.textContent = `
-    @media(max-width: 768px) {
-      .project-description-grid {
-        grid-template-columns: 1fr !important;
-      }
-    }
-  `;
-  if (!document.getElementById('project-card-responsive-styles')) {
-    style.id = 'project-card-responsive-styles';
-    document.head.appendChild(style);
-  }
 }

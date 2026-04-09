@@ -55,6 +55,7 @@ body {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  transition: background 0.2s ease;
 }
 
 .cursor-ring {
@@ -74,6 +75,19 @@ body {
 .cursor-ring.hovering {
   width: 44px;
   height: 44px;
+  border-color: var(--beige-dark);
+}
+
+/* White cursor over black backgrounds */
+.cursor-dot.on-black {
+  background: var(--white);
+}
+
+.cursor-ring.on-black {
+  border-color: var(--white);
+}
+
+.cursor-ring.on-black.hovering {
   border-color: var(--beige-dark);
 }
 
