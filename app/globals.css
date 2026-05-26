@@ -330,13 +330,51 @@ button:active {
   .project-description-grid {
     grid-template-columns: 1fr !important;
   }
-  
+
   html {
     cursor: auto;
   }
-  
+
   .cursor-dot,
   .cursor-ring {
     display: none;
+  }
+}
+
+@media(max-width: 640px) {
+  /* Project card header: shrink cover, keep horizontal layout */
+  .project-card-header {
+    grid-template-columns: 130px 1fr auto !important;
+    height: 130px !important;
+  }
+  .project-card-cover {
+    width: 130px !important;
+    height: 130px !important;
+  }
+  .project-card-info {
+    padding: 1rem !important;
+  }
+
+  /* Expanded section: reduce padding */
+  .project-expanded-inner {
+    padding: 0.75rem !important;
+  }
+
+  /* Sub-frame folder grid: 1 column */
+  .project-subframe-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Panels (Showcase / LargeDrawings / Section+Graphic): stack */
+  .panels-side-by-side {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Portfolio grids: single column */
+  .portfolio-featured-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .portfolio-standard-grid {
+    grid-template-columns: 1fr !important;
   }
 }

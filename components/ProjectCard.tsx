@@ -96,6 +96,15 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
   // Disable scroll-gray (force full color) when project is expanded
   const gray = useScrollGray(cardRef, isExpanded);
 
+  // Scroll card into view when expanded so browser doesn't chase the toggle button
+  useEffect(() => {
+    if (!isExpanded) return;
+    const t = setTimeout(() => {
+      cardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+    return () => clearTimeout(t);
+  }, [isExpanded]);
+
   const isBathHouse = project.id === 'bath-house';
   const isMidRise = project.id === 'mid-rise-complex';
   const isRiverside = project.id === 'riverside-residential';
@@ -115,6 +124,7 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
       {/* ── HEADER ── */}
       <div
         onClick={onToggle} data-hover
+        className="project-card-header"
         style={{ display: 'grid', gridTemplateColumns: '260px 1fr auto', alignItems: 'stretch', cursor: 'pointer', height: '260px', transition: 'box-shadow 0.2s ease, transform 0.2s ease' }}
         onMouseEnter={(e) => {
           const el = e.currentTarget as HTMLDivElement;
@@ -128,7 +138,7 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
         }}
       >
         {/* Cover — scroll-based color */}
-        <div style={{ height: '260px', width: '260px', overflow: 'hidden', position: 'relative', background: 'var(--gray-50)', flexShrink: 0 }}>
+        <div className="project-card-cover" style={{ height: '260px', width: '260px', overflow: 'hidden', position: 'relative', background: 'var(--gray-50)', flexShrink: 0 }}>
           {coverSrc ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={coverSrc} alt={project.title}
@@ -152,7 +162,7 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
         </div>
 
         {/* Info */}
-        <div style={{ padding: '1.75rem 2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '1px solid var(--black)', overflow: 'hidden' }}>
+        <div className="project-card-info" style={{ padding: '1.75rem 2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '1px solid var(--black)', overflow: 'hidden' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
               <span className="label">{project.semester}</span>
@@ -185,7 +195,7 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
 
       {/* ── EXPANDED ── */}
       <div style={{ overflow: 'hidden', maxHeight: isExpanded ? '9999px' : '0', transition: 'max-height 0.8s cubic-bezier(0.16,1,0.3,1)', borderTop: isExpanded ? '1px solid var(--black)' : 'none' }}>
-        <div style={{ background: 'var(--off-white)', padding: '1.5rem 2rem', display: 'flex', flexDirection: 'column', gap: '1.5px' }}>
+        <div className="project-expanded-inner" style={{ background: 'var(--off-white)', padding: '1.5rem 2rem', display: 'flex', flexDirection: 'column', gap: '1.5px' }}>
 
           {/* Bath House: 3 panels side by side */}
           {isBathHouse && panelItems.length > 0 && (
@@ -217,7 +227,7 @@ export function ProjectCard({ project, isExpanded, onToggle }: {
 
           {/* Sub-frame categories: carousel for large sets, grid for small */}
           {subFrameCategories.length > 0 && (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1.5px', alignItems: 'start' }}>
+            <div className="project-subframe-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1.5px', alignItems: 'start' }}>
               {subFrameCategories.map((cat, idx) => (
                 <FolderWindow key={cat} title={cat} symbol={SYM[cat] || '×'} count={groups[cat].length}>
                   {groups[cat].length >= CAROUSEL_THRESHOLD ? (
@@ -306,7 +316,7 @@ function FolderWindow({ title, symbol, count, children, large }: {
 function ThreePanelsSideBySide({ items, gridCols }: { items: MediaItem[]; gridCols?: string }) {
   const cols = gridCols ?? `repeat(${Math.min(items.length, 3)}, 1fr)`;
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: cols, gap: 0 }}>
+    <div className="panels-side-by-side" style={{ display: 'grid', gridTemplateColumns: cols, gap: 0 }}>
       {items.map((item, i) => (
         <div key={i} style={{ position: 'relative', borderRight: i < items.length - 1 ? '1px solid var(--black)' : 'none', background: 'var(--white)' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -347,7 +357,7 @@ function PortfolioGrid({ items, cat, featuredFirst, featuredLeft }: {
   if (featuredLeft && items.length > 1) {
     const cols = `2fr ${items.slice(1).map(() => '1fr').join(' ')}`;
     return (
-      <div style={{ display: 'grid', gridTemplateColumns: cols, gap: '1px', background: 'var(--gray-100)', alignItems: 'stretch' }}>
+      <div className="portfolio-featured-grid" style={{ display: 'grid', gridTemplateColumns: cols, gap: '1px', background: 'var(--gray-100)', alignItems: 'stretch' }}>
         {items.map((item, i) => (
           <div key={i} style={{ background: 'var(--white)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
             {i === 0 ? (
@@ -379,7 +389,7 @@ function PortfolioGrid({ items, cat, featuredFirst, featuredLeft }: {
 
   const cols = colsFor(cat, items.length);
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: '1px', background: 'var(--gray-100)' }}>
+    <div className="portfolio-standard-grid" style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: '1px', background: 'var(--gray-100)' }}>
       {items.map((item, i) => {
         const rot = item.rotate ?? 0;
         const spanFull = featuredFirst && i === 0 && cols > 1;
