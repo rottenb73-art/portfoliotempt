@@ -35,17 +35,40 @@ export const projects: Project[] = [
     year: 2026,
     season: 'Spring',
     order: 4,
-    wip: true,
     shortDescription: 'Residential complex composed of modular units.',
     longDescription: '',
     tags: ['Mixed-Use', 'Urban Density'],
-    coverOverride: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Drawings/comprehensive plan.jpg')}`,
+    coverOverride: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/rotating midrise preview gif.gif')}`,
     media: [
-      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Drawings/comprehensive plan.jpg')}`, alt: 'Comprehensive Plan', category: 'Drawings' },
-      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Drawings/Axonometric Section.jpeg')}`, alt: 'Axonometric Section', category: 'Drawings' },
-      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Drawings/birdseye drawing-02.jpg')}`, alt: 'Birdseye Drawing', category: 'Drawings' },
+      // Large Drawings — displayed side by side
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/LargeDrawings/comprehensive plan with renders and all updated for midterm.jpg')}`, alt: 'Comprehensive Plan', category: 'LargeDrawings' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/LargeDrawings/birdseyeviewcoloredfinal.jpg')}`, alt: 'Birdseye View — Colored', category: 'LargeDrawings' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/LargeDrawings/sectionfrpmdrivespring2026.jpg')}`, alt: 'Section from Drive', category: 'LargeDrawings' },
+      // Chunk Model images
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Chunk Model images/Front Viewchunk edited.png')}`, alt: 'Chunk Model — Front View', category: 'Chunk Model' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Chunk Model images/circulationedited.png')}`, alt: 'Chunk Model — Circulation', category: 'Chunk Model' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Chunk Model images/stackedunitsedited.png')}`, alt: 'Chunk Model — Stacked Units', category: 'Chunk Model' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Chunk Model images/stairsedited.png')}`, alt: 'Chunk Model — Stairs', category: 'Chunk Model' },
+      // Massing Model images
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Massing Model images/N EDITED.png')}`, alt: 'Massing — North', category: 'Massing Model' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Massing Model images/NW edited.png')}`, alt: 'Massing — Northwest', category: 'Massing Model' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Massing Model images/S edited.png')}`, alt: 'Massing — South', category: 'Massing Model' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Massing Model images/TOP edited.png')}`, alt: 'Massing — Top', category: 'Massing Model' },
+      // Diagrams & Massing studies
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/DiagramAndMassing/massingmovement diagram.jpg')}`, alt: 'Massing Movement Diagram', category: 'Diagrams' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/DiagramAndMassing/LandScapeLinesDiagram.png')}`, alt: 'Landscape Lines Diagram', category: 'Diagrams' },
+      // Site Analysis
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Site Analysis, 2700 & 2800 S Lamar Blvd (Austin, TX 78704)/Height map-01.jpg')}`, alt: 'Height Map', category: 'Site Analysis' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Site Analysis, 2700 & 2800 S Lamar Blvd (Austin, TX 78704)/Noise Diagram-03.jpg')}`, alt: 'Noise Diagram', category: 'Site Analysis' },
+      // Precedents
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Precedents/520 W 28th Zaha Hadid/zaha hadid plan-01-01-01.jpg')}`, alt: 'Zaha Hadid — 520 W 28th Plan', category: 'Precedents' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Precedents/Habitat Qinhuangdao Safdie/habitatsafdieagggregiso.jpg')}`, alt: 'Habitat Safdie — Aggregate Iso', category: 'Precedents' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Precedents/Habitat Qinhuangdao Safdie/habitatsafdieaggregtop.jpg')}`, alt: 'Habitat Safdie — Aggregate Top', category: 'Precedents' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Precedents/Jenga Building/jenga circulation file-01.jpg')}`, alt: 'Jenga Building — Circulation', category: 'Precedents' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Precedents/Jenga Building/jenga unit diagram file-01.jpg')}`, alt: 'Jenga Building — Unit Diagram 01', category: 'Precedents' },
+      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Precedents/Jenga Building/jenga unit diagram file-02.jpg')}`, alt: 'Jenga Building — Unit Diagram 02', category: 'Precedents' },
+      // Art Progression
       { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Art Progression/pattern12314-07.jpg')}`, alt: 'Pattern Study', category: 'Art Progression' },
-      { type: 'image', src: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/Art Progression/1.jpg')}`, alt: 'Art Progression Study', category: 'Art Progression' },
     ],
   },
   {
@@ -58,7 +81,7 @@ export const projects: Project[] = [
     shortDescription: 'Modern day public bath house project.',
     longDescription: '',
     tags: ['Public Building', 'Civic', 'Materiality'],
-    coverOverride: `${BASE}/${enc('BATH HOUSE, Fall 2025/diagramcroppreview.jpg')}`,
+    coverOverride: `${BASE}/${enc('BATH HOUSE, Fall 2025/bathhouse_animated.gif')}`,
     media: [
       // 3 showcase panels shown side by side
       {
@@ -105,15 +128,15 @@ In contradiction to the downward pull of the floor, the roof is angled to pull s
     titleImage: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Riverside Full Model including neighbors (Next to project description maybe).jpg')}`,
     tags: ['Residential', 'Landscape Integration', 'Single Family'],
     media: [
-      // Graphic first in drawings category
-      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/riversidehousegraphic.jpg')}`, alt: 'House Graphic', category: 'Drawings' },
+      // Section 02 + House Graphic displayed side by side
+      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Sections-02.png')}`, alt: 'Section 02', category: 'Section & Graphic' },
+      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/riversidehousegraphic.jpg')}`, alt: 'House Graphic', category: 'Section & Graphic' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Front Elevation.jpg')}`, alt: 'Front Elevation', category: 'Drawings' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Back elevation.jpg')}`, alt: 'Back Elevation', category: 'Drawings' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Left elevation.jpg')}`, alt: 'Left Elevation', category: 'Drawings' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Right elevation.jpg')}`, alt: 'Right Elevation', category: 'Drawings' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Plan.jpg')}`, alt: 'Floor Plan', category: 'Drawings' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Sections-01.png')}`, alt: 'Section 01', category: 'Drawings' },
-      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Sections-02.png')}`, alt: 'Section 02', category: 'Drawings' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/House Model Pics/riversidehousemod1.jpg')}`, alt: 'House Model — View 1', category: 'House Model' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/House Model Pics/riversidehousemod2.jpg')}`, alt: 'House Model — View 2', category: 'House Model' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/House Model Pics/riversidehousemod3.jpg')}`, alt: 'House Model — View 3', category: 'House Model' },
@@ -158,16 +181,17 @@ The new proportioning system of my model came from the rearrangement of simplifi
     titleImage: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/fall 2024 TITLE IMAGE.png')}`,
     tags: ['Spatial Design', 'Phenomenology', 'Form Study'],
     media: [
+      // Model Views first
+      { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Model Views/FP1.png')}`, alt: 'Model View 1', category: 'Model Views' },
+      { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Model Views/FP2.png')}`, alt: 'Model View 2', category: 'Model Views' },
+      { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Model Views/FP3.png')}`, alt: 'Model View 3', category: 'Model Views' },
+      { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Model Views/FP4.png')}`, alt: 'Model View 4', category: 'Model Views' },
       { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Drawings/S&P PRINTS1pegg_Page_1.png')}`, alt: 'S&P Prints — Page 1', category: 'Drawings' },
       { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Drawings/S&P PRINTS1pegg_Page_2.png')}`, alt: 'S&P Prints — Page 2', category: 'Drawings' },
       { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Drawings/S&P PRINTS1pegg_Page_3.png')}`, alt: 'S&P Prints — Page 3', category: 'Drawings' },
       { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Drawings/S&P PRINTSpeg_Page_1.jpg')}`, alt: 'S&P Prints Peg — Page 1', category: 'Drawings', rotate: -90 },
       { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Drawings/S&P PRINTSpeg_Page_2.jpg')}`, alt: 'S&P Prints Peg — Page 2', category: 'Drawings', rotate: -90 },
       { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Drawings/S&P PRINTSpeg_Page_3.jpg')}`, alt: 'S&P Prints Peg — Page 3', category: 'Drawings', rotate: -90 },
-      { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Model Views/FP1.png')}`, alt: 'Model View 1', category: 'Model Views' },
-      { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Model Views/FP2.png')}`, alt: 'Model View 2', category: 'Model Views' },
-      { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Model Views/FP3.png')}`, alt: 'Model View 3', category: 'Model Views' },
-      { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Model Views/FP4.png')}`, alt: 'Model View 4', category: 'Model Views' },
       { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Part 1, Abstract drawings grid/1.png')}`, alt: 'Abstract Drawing — 01', category: 'Abstract Drawings' },
       { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Part 1, Abstract drawings grid/2.jpg')}`, alt: 'Abstract Drawing — 02', category: 'Abstract Drawings' },
       { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Part 1, Abstract drawings grid/3.jpg')}`, alt: 'Abstract Drawing — 03', category: 'Abstract Drawings' },
