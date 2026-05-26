@@ -342,17 +342,28 @@ button:active {
 }
 
 @media(max-width: 640px) {
-  /* Project card header: shrink cover, keep horizontal layout */
+  /* Project card header: shrink cover, keep horizontal layout, auto height */
   .project-card-header {
-    grid-template-columns: 130px 1fr auto !important;
-    height: 130px !important;
+    grid-template-columns: 120px 1fr auto !important;
+    height: auto !important;
+    min-height: 120px !important;
   }
   .project-card-cover {
-    width: 130px !important;
-    height: 130px !important;
+    width: 120px !important;
+    height: 100% !important;
+    min-height: 120px !important;
   }
   .project-card-info {
-    padding: 1rem !important;
+    padding: 0.85rem !important;
+  }
+  /* Scale title and description to fit narrow column */
+  .project-card-info h3 {
+    font-size: 0.78rem !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.15 !important;
+  }
+  .project-card-info p {
+    font-size: 0.58rem !important;
   }
 
   /* Expanded section: reduce padding */
