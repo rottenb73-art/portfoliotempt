@@ -141,14 +141,19 @@ export function ProjectPageClient({
               that used to tie it down had no rule left to meet. */}
           {coverImage && (
             <div className="sheet-hero">
-              <span className="sheet-hero-band" aria-hidden="true" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={coverImage}
-                alt={`${project.title} — cover figure`}
-                className="sheet-hero-img"
-                onError={(e) => (((e.currentTarget as HTMLImageElement).style.opacity = '0'))}
-              />
+              {/* The band is centred on the photo, so it is measured against
+                  the photo: this figure shrink-wraps the image and the band's
+                  insets resolve against that box rather than the column. */}
+              <span className="sheet-hero-figure">
+                <span className="sheet-hero-band" aria-hidden="true" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={coverImage}
+                  alt={`${project.title} — cover figure`}
+                  className="sheet-hero-img"
+                  onError={(e) => (((e.currentTarget as HTMLImageElement).style.opacity = '0'))}
+                />
+              </span>
             </div>
           )}
         </div>
@@ -278,24 +283,29 @@ export function ProjectPageClient({
 
         /* Pale band, wider than the figure and running out past it on both
            sides — the offset that keeps the cover from reading as a card. */
-        .sheet-hero { position: relative; }
+        /* The figure still hangs to the right edge of the column; it is the
+           band inside it that is centred. */
+        .sheet-hero { display: flex; justify-content: flex-end; }
+        .sheet-hero-figure {
+          position: relative;
+          max-width: 100%;
+        }
+        /* Equal overhang on all four sides of the photo. The total width is
+           what it always was — 22% of the figure beyond its edges — but split
+           evenly instead of 16% left against 6% right. */
         .sheet-hero-band {
           position: absolute;
-          left: -16%;
-          right: -6%;
-          top: 19%;
-          bottom: 19%;
+          inset: 19% -11%;
           background: var(--gray-50);
         }
-        /* Capped and hung to the right edge: a portrait cover would otherwise
-           run the header two screens tall and strand the text beside it. */
+        /* Capped: a portrait cover would otherwise run the header two screens
+           tall and strand the text beside it. */
         .sheet-hero-img {
           position: relative;
           display: block;
           width: auto;
           max-width: 100%;
           max-height: min(40vh, 400px);
-          margin-left: auto;
         }
 
         /* Brief and its margin notes. The notes column is capped rather than

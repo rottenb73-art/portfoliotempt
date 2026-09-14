@@ -54,7 +54,21 @@
 
 html {
   scroll-behavior: smooth;
-  cursor: none;
+  /* Anchors land below the 52px fixed nav instead of under it. */
+  scroll-padding-top: 60px;
+}
+
+/* The custom cursor is a pointer affordance, so it is mouse-only. Hiding the
+   system cursor on a touch device hides nothing, but the two elements that
+   replace it are driven by mousemove — with no mouse they never receive a
+   position and sit stacked in the top-left corner of the page for the whole
+   visit. Both the hiding and the replacement belong behind a fine pointer. */
+@media (pointer: fine) {
+  html { cursor: none; }
+}
+@media not (pointer: fine) {
+  .cursor-dot,
+  .cursor-ring { display: none; }
 }
 
 body {
@@ -249,5 +263,3 @@ button:active {
     display: none;
   }
 }
-
-

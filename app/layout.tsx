@@ -14,7 +14,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    // data-scroll-behavior tells the router the page opts into smooth
+    // scrolling, so it does not fight the CSS during route transitions.
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
         <CustomCursor />
         <Nav />

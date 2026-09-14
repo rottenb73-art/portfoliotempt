@@ -65,6 +65,33 @@ export function Nav() {
     };
   }, [isHome]);
 
+  /**
+   * Same-page hash links are scrolled by hand.
+   *
+   * On the home page these links point at `/#about` from `/`, which is a
+   * navigation to the route the reader is already on. Whether that scrolls is
+   * up to the router, and it is one of the two reasons these read as dead on
+   * a phone. Doing it here means the behaviour is the same everywhere and
+   * does not depend on how the hash is handled.
+   */
+  const onSegmentClick = (e: React.MouseEvent<HTMLAnchorElement>, key: string, watch: string | null, href: string) => {
+    if (!isHome) return; // A real navigation from a project page — let it run.
+    e.preventDefault();
+
+    if (!watch) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.history.replaceState(null, '', '/');
+      setActive('home');
+      return;
+    }
+
+    const el = document.getElementById(watch);
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.history.replaceState(null, '', href);
+    setActive(key);
+  };
+
   const separator = (
     <span aria-hidden="true" style={{ color: 'var(--gray-200)', padding: '0 0.15rem', userSelect: 'none' }}>
       /
@@ -123,6 +150,7 @@ export function Nav() {
                 data-hover
                 className={`nav-segment${isActive ? ' is-active' : ''}`}
                 aria-current={isActive ? 'page' : undefined}
+                onClick={(e) => onSegmentClick(e, segment.key, segment.watch, segment.href)}
               >
                 {segment.label}
               </Link>
@@ -174,6 +202,21 @@ export function Nav() {
           }
           .nav-segment {
             padding: 0.15rem 0.18rem;
+          }
+        }
+
+        /* The other reason these read as dead on a phone: at the 520px size
+           above, "about" is a 30x19px target — well under the 44px a finger
+           needs, with a slash on either side to miss it against. A touch
+           reader gets a bigger type size and enough padding to fill the bar's
+           52px height, which costs a mouse reader nothing. */
+        @media (pointer: coarse) {
+          .nav-path { font-size: 0.68rem; }
+          .nav-segment {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 0 0.5rem;
           }
         }
       `}</style>
