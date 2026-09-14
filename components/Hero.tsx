@@ -216,6 +216,7 @@ export function Hero({ projects }: HeroProps) {
 
               {/* Meta */}
               <span
+                className="hero-directory-meta"
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -347,15 +348,51 @@ export function Hero({ projects }: HeroProps) {
             border-bottom: 1px solid var(--black);
             min-height: 72vh;
           }
+
+          /* ── Static cards ───────────────────────────────────────
+             The accordion is a desktop device: rows share a fixed panel
+             height and one steals it back on hover. On touch there is no
+             hover to steal with, so the rows just sat at a capped height
+             with the panel clipping whatever did not fit — which is what
+             was cutting the description off. Here each row is simply as
+             tall as its own content.
+
+             The panel's overflow has to go with it: it exists to clip the
+             accordion, and left on it clips the taller cards instead. */
+          .hero-directory-panel { overflow: visible !important; }
           .hero-directory-row {
-            grid-template-columns: clamp(24px, 6vw, 34px) minmax(0, 1fr) minmax(0, 1.2fr) !important;
+            flex: none !important;
+            min-height: 0;
+            transition: none;
+            /* Image over text, with the rail running down the side of both,
+               so the cover gets the full width of the screen rather than
+               splitting it with the title. */
+            grid-template-columns: clamp(24px, 6vw, 34px) minmax(0, 1fr) !important;
+            grid-template-areas: 'rail thumb' 'rail meta';
           }
-          /* No hover to trigger the accordion on touch — show the detail outright. */
+          .hero-directory-rail {
+            grid-area: rail;
+            justify-content: flex-start;
+          }
+          .hero-directory-thumb {
+            grid-area: thumb;
+            aspect-ratio: 16 / 10;
+            border-right: none !important;
+            border-bottom: 1px solid var(--gray-100);
+          }
+          .hero-directory-meta {
+            grid-area: meta;
+            justify-content: flex-start !important;
+            padding: clamp(0.9rem, 3vw, 1.25rem) clamp(1rem, 4vw, 1.5rem) clamp(1.25rem, 4vw, 1.75rem) !important;
+          }
+          /* Nothing to reveal it on touch, so the detail is simply part of
+             the card. No max-height cap either — the row grows to hold it. */
           .hero-directory-detail {
             opacity: 1;
-            max-height: 12rem;
+            max-height: none;
             margin-top: 0.5rem;
             transform: none;
+            transition: none;
           }
         }
       `}</style>
