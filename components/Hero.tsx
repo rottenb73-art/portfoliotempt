@@ -1,27 +1,19 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import type { Project } from '@/lib/projects';
 
 interface HeroProps {
-  coverPhoto: string;
+  projects: Project[];
 }
 
+// Rail glyph cycles ○ □ × alongside each project row, matching the marker
+// rhythm used in the About and Contact sections.
 const SYMBOLS = ['○', '□', '×'];
 
-export function Hero({ coverPhoto }: HeroProps) {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+export function Hero({ projects }: HeroProps) {
   const [typedIndex, setTypedIndex] = useState(0);
   const subtitleText = '// architecture';
-
-  useEffect(() => {
-    const onMouse = (e: MouseEvent) => {
-      setMousePos({
-        x: (e.clientX / window.innerWidth - 0.5) * 14,
-        y: (e.clientY / window.innerHeight - 0.5) * 8,
-      });
-    };
-    window.addEventListener('mousemove', onMouse);
-    return () => window.removeEventListener('mousemove', onMouse);
-  }, []);
 
   useEffect(() => {
     if (typedIndex >= subtitleText.length) return;
@@ -30,250 +22,343 @@ export function Hero({ coverPhoto }: HeroProps) {
   }, [typedIndex, subtitleText.length]);
 
   return (
-    <>
-      <section
-        className="hero-section"
+    <section
+      className="hero-section"
+      style={{
+        minHeight: 'min(100vh, 820px)',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        borderBottom: '1px solid var(--black)',
+        position: 'relative',
+      }}
+    >
+      {/* LEFT PANEL — identity */}
+      <div
+        className="hero-identity"
         style={{
-          minHeight: '100vh',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          borderBottom: '1px solid var(--black)',
+          borderRight: '1px solid var(--black)',
+          display: 'flex',
+          flexDirection: 'column',
+          padding: 'clamp(1.25rem, 3vw, 2rem) clamp(1.5rem, 5vw, 3.5rem) 0',
           position: 'relative',
+          overflow: 'hidden',
         }}
       >
-        {/* LEFT PANEL */}
+        {/* Title */}
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <h1 style={{ fontSize: 0, lineHeight: 0 }}>
+            <span className="hero-title-clip" style={{ display: 'block' }}>
+              <span
+                className="hero-title-inner"
+                style={{
+                  display: 'block',
+                  fontFamily: 'var(--font-mono)',
+                  fontWeight: 700,
+                  fontSize: 'clamp(2.2rem, 7.6vw, 5.6rem)',
+                  letterSpacing: '-0.045em',
+                  lineHeight: 1,
+                  animationDelay: '0.1s',
+                }}
+              >
+                AYDEN
+              </span>
+            </span>
+            <span className="hero-title-clip" style={{ display: 'block' }}>
+              <span
+                className="hero-title-inner"
+                style={{
+                  display: 'block',
+                  fontFamily: 'var(--font-mono)',
+                  fontWeight: 300,
+                  fontStyle: 'italic',
+                  fontSize: 'clamp(2.2rem, 7.6vw, 5.6rem)',
+                  letterSpacing: '-0.045em',
+                  lineHeight: 1,
+                  animationDelay: '0.22s',
+                }}
+              >
+                PETTIETTE
+              </span>
+            </span>
+          </h1>
+
+          {/* Typewriter */}
+          <div style={{ marginTop: 'clamp(1.5rem, 3.5vw, 2.25rem)', height: '1.4rem' }}>
+            <span
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: 'clamp(0.7rem, 1.5vw, 0.8rem)',
+                color: 'var(--gray-500)',
+                letterSpacing: '0.04em',
+              }}
+            >
+              {subtitleText.slice(0, typedIndex)}
+              <span className="blink" style={{ borderLeft: '2px solid var(--gray-500)', marginLeft: '1px' }} />
+            </span>
+          </div>
+        </div>
+
+        {/* Bottom meta strip */}
         <div
+          className="hero-meta"
           style={{
-            borderRight: '1px solid var(--black)',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            padding: 'clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 3rem) clamp(1.5rem, 4vw, 3rem)',
-            position: 'relative',
-            overflow: 'hidden',
+            borderTop: '1px solid var(--black)',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))',
+            gap: 'clamp(1rem, 3vw, 2rem)',
+            padding: 'clamp(1rem, 2.5vw, 1.5rem) 0 clamp(1.25rem, 3vw, 1.75rem)',
           }}
         >
-          {/* Top labels */}
-          <div style={{ 
-            position: 'absolute', 
-            top: 'clamp(1rem, 3vw, 1.5rem)', 
-            left: 'clamp(1.5rem, 5vw, 3rem)', 
-            display: 'flex', 
-            gap: 'clamp(1rem, 3vw, 2rem)',
-            flexWrap: 'wrap'
-          }}>
-            <span className="label">ARCH_PORTFOLIO</span>
-            <span className="label" style={{ color: 'var(--gray-300)' }}>v2024–2026</span>
-          </div>
-
-          {/* Symbol grid top right */}
-          <div style={{ 
-            position: 'absolute', 
-            top: 'clamp(1rem, 2.5vw, 1.25rem)', 
-            right: 'clamp(1.5rem, 5vw, 3rem)', 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(3,1fr)', 
-            gap: 'clamp(0.3rem, 1vw, 0.5rem)', 
-            opacity: 0.15 
-          }}>
-            {[...Array(9)].map((_, i) => (
-              <span key={i} style={{ fontFamily: 'var(--font-mono)', fontSize: 'clamp(0.5rem, 1.2vw, 0.7rem)' }}>{SYMBOLS[i % 3]}</span>
-            ))}
-          </div>
-
-          {/* Title */}
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <div className="hero-title-clip" style={{ marginBottom: '0.1rem' }}>
-              <h1 className="hero-title-inner" style={{ 
-                fontFamily: 'var(--font-mono)', 
-                fontWeight: 700, 
-                fontSize: 'clamp(2.2rem, 8vw, 6rem)', 
-                letterSpacing: '-0.04em', 
-                lineHeight: 1 
-              }}>
-                AYDEN
-              </h1>
+          {[
+            ['INSTITUTION', 'Texas A&M'],
+            ['DEGREE', 'BS.Arch'],
+            ['PERIOD', '2024 — 2028'],
+          ].map(([key, value]) => (
+            <div key={key}>
+              <div className="label" style={{ marginBottom: '0.5rem' }}>{key}</div>
+              <div
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: 'clamp(0.72rem, 1.4vw, 0.84rem)',
+                  fontWeight: 400,
+                  lineHeight: 1.5,
+                }}
+              >
+                {value}
+              </div>
             </div>
-            <div className="hero-title-clip">
-              <h1 className="hero-title-inner" style={{ 
-                fontFamily: 'var(--font-mono)', 
-                fontWeight: 300, 
-                fontStyle: 'italic', 
-                fontSize: 'clamp(2.2rem, 8vw, 6rem)', 
-                letterSpacing: '-0.04em', 
-                lineHeight: 1 
-              }}>
-                PETTIETTE
-              </h1>
-            </div>
-
-            {/* Typewriter */}
-            <div style={{ marginTop: 'clamp(1rem, 3vw, 2rem)', height: '1.4rem' }}>
-              <span style={{ 
-                fontFamily: 'var(--font-mono)', 
-                fontSize: 'clamp(0.65rem, 1.5vw, 0.75rem)', 
-                color: 'var(--gray-500)', 
-                letterSpacing: '0.04em' 
-              }}>
-                {subtitleText.slice(0, typedIndex)}
-                <span className="blink" style={{ borderLeft: '2px solid var(--gray-500)', marginLeft: '1px' }} />
-              </span>
-            </div>
-          </div>
-
-          {/* Bottom meta */}
-          <div style={{ borderTop: '1px solid var(--black)', paddingTop: 'clamp(1rem, 3vw, 1.5rem)' }}>
-            <div style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', 
-              gap: '1rem', 
-              marginBottom: 'clamp(1rem, 3vw, 1.5rem)' 
-            }}>
-              {[['INSTITUTION','Texas A&M'],['DEGREE','B.Arch'],['PERIOD','2024 — 2026'],['PROJECTS','04']].map(([k,v]) => (
-                <div key={k}>
-                  <div className="label" style={{ marginBottom: '0.2rem' }}>{k}</div>
-                  <div style={{ 
-                    fontFamily: 'var(--font-mono)', 
-                    fontSize: 'clamp(0.65rem, 1.5vw, 0.75rem)', 
-                    fontWeight: 500 
-                  }}>{v}</div>
-                </div>
-              ))}
-            </div>
-            <a
-              href="#work"
-              data-hover
-              style={{ 
-                display: 'inline-flex', 
-                alignItems: 'center', 
-                gap: '0.75rem', 
-                fontFamily: 'var(--font-mono)', 
-                fontSize: 'clamp(0.6rem, 1.3vw, 0.7rem)', 
-                letterSpacing: '0.1em', 
-                textTransform: 'uppercase', 
-                color: 'var(--white)', 
-                background: 'var(--black)', 
-                textDecoration: 'none', 
-                padding: 'clamp(0.5rem, 1.5vw, 0.6rem) clamp(1rem, 2.5vw, 1.25rem)', 
-                border: '1px solid var(--black)', 
-                transition: 'background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s' 
-              }}
-              onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.background='var(--white)'; el.style.color='var(--black)'; el.style.boxShadow='4px 4px 0 var(--beige-dark)'; el.style.transform='translate(-2px,-2px)'; }}
-              onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.background='var(--black)'; el.style.color='var(--white)'; el.style.boxShadow='none'; el.style.transform='none'; }}
-            >
-              <span>□</span> VIEW_PROJECTS
-            </a>
-          </div>
-        </div>
-
-        {/* RIGHT PANEL */}
-        <div className="hero-image-panel" style={{ 
-          position: 'relative', 
-          overflow: 'hidden', 
-          background: 'var(--gray-50)',
-          minHeight: '50vh'
-        }}>
-          <div style={{ 
-            position: 'absolute', 
-            inset: '-4%', 
-            transform: `translate(${mousePos.x * 0.25}px,${mousePos.y * 0.25}px)`, 
-            transition: 'transform 0.5s ease' 
-          }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={coverPhoto} alt="Ayden Pettiette" style={{ 
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'cover', 
-              display: 'block', 
-              filter: 'grayscale(100%) contrast(1.05)' 
-            }} onError={(e) => ((e.currentTarget as HTMLImageElement).style.opacity = '0')} />
-          </div>
-          <div style={{ 
-            position: 'absolute', 
-            bottom: 'clamp(1rem, 3vw, 2rem)', 
-            left: 'clamp(1rem, 3vw, 2rem)', 
-            display: 'flex', 
-            gap: '0.75rem', 
-            zIndex: 2, 
-            mixBlendMode: 'difference' 
-          }}>
-            {SYMBOLS.map((s) => (
-              <span key={s} style={{ 
-                fontFamily: 'var(--font-mono)', 
-                fontSize: 'clamp(1rem, 2.5vw, 1.25rem)', 
-                color: 'var(--white)', 
-                fontWeight: 300 
-              }}>{s}</span>
-            ))}
-          </div>
-        </div>
-
-        {/* Vertical label - hide on mobile */}
-        <div className="hero-vertical-label" style={{ 
-          position: 'absolute', 
-          bottom: 'clamp(1.5rem, 4vw, 3rem)', 
-          right: '-3.5rem', 
-          transform: 'rotate(90deg)', 
-          transformOrigin: 'left center', 
-          fontFamily: 'var(--font-mono)', 
-          fontSize: 'clamp(0.45rem, 1vw, 0.55rem)', 
-          letterSpacing: '0.3em', 
-          color: 'var(--gray-300)', 
-          textTransform: 'uppercase', 
-          pointerEvents: 'none' 
-        }}>
-          ARCHITECTURAL_PORTFOLIO ×
-        </div>
-      </section>
-
-      {/* MARQUEE */}
-      <div style={{ 
-        borderBottom: '1px solid var(--black)', 
-        padding: 'clamp(0.4rem, 1.2vw, 0.6rem) 0', 
-        overflow: 'hidden', 
-        background: 'var(--black)' 
-      }}>
-        <div className="marquee-track">
-          {[...Array(4)].map((_, i) => (
-            <span key={i} style={{ 
-              display: 'inline-flex', 
-              alignItems: 'center', 
-              gap: 'clamp(1rem, 3vw, 2rem)', 
-              paddingRight: 'clamp(1rem, 3vw, 2rem)', 
-              fontFamily: 'var(--font-mono)', 
-              fontSize: 'clamp(0.5rem, 1.2vw, 0.6rem)', 
-              letterSpacing: '0.15em', 
-              textTransform: 'uppercase', 
-              color: 'var(--gray-300)', 
-              whiteSpace: 'nowrap' 
-            }}>
-              <span style={{ color: 'var(--beige-dark)' }}>○</span><span>Architectural Design</span>
-              <span style={{ color: 'var(--beige-dark)' }}>□</span><span>Translation of Space — Fall 2024</span>
-              <span style={{ color: 'var(--beige-dark)' }}>×</span><span>Riverside Residential — Spring 2025</span>
-              <span style={{ color: 'var(--beige-dark)' }}>○</span><span>Bath House — Fall 2025</span>
-              <span style={{ color: 'var(--beige-dark)' }}>□</span><span>Mid Rise Complex — Spring 2026</span>
-              <span style={{ color: 'var(--beige-dark)' }}>×</span><span>Texas A&amp;M University</span>
-            </span>
           ))}
         </div>
       </div>
 
+      {/* RIGHT PANEL — project index */}
+      <nav
+        aria-label="Projects"
+        className="hero-directory-panel"
+        style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
+      >
+        <div
+          style={{
+            padding: 'clamp(1.25rem, 3vw, 2rem) clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 2.5vw, 1.5rem)',
+          }}
+        >
+          <h2
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontWeight: 700,
+              fontSize: 'clamp(1.45rem, 3.2vw, 2.4rem)',
+              letterSpacing: '-0.035em',
+              lineHeight: 1,
+            }}
+          >
+            PROJECTS
+          </h2>
+        </div>
+
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', borderTop: '1px solid var(--black)' }}>
+          {projects.map((p, i) => (
+            <Link
+              key={p.id}
+              href={`/project/${p.id}`}
+              data-hover
+              className="hero-directory-row"
+              style={{
+                gridTemplateColumns: 'clamp(24px, 3vw, 34px) minmax(0, 0.9fr) minmax(0, 1.1fr)',
+                borderBottom: i < projects.length - 1 ? '1px solid var(--gray-100)' : 'none',
+                textDecoration: 'none',
+                color: 'var(--black)',
+              }}
+            >
+              {/* Symbol rail */}
+              <span
+                className="hero-directory-rail"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'flex-start',
+                  gap: '0.75rem',
+                  paddingTop: 'clamp(0.75rem, 2vw, 1.1rem)',
+                  borderRight: '1px solid var(--gray-100)',
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: 'clamp(0.5rem, 1.1vw, 0.6rem)',
+                    color: 'var(--gray-300)',
+                    lineHeight: 1,
+                  }}
+                >
+                  {SYMBOLS[i % SYMBOLS.length]}
+                </span>
+              </span>
+
+              {/* Wide slice */}
+              <span
+                className="hero-directory-thumb"
+                style={{
+                  display: 'block',
+                  overflow: 'hidden',
+                  background: 'var(--gray-50)',
+                  borderRight: '1px solid var(--gray-100)',
+                }}
+              >
+                {p.coverOverride && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={p.coverOverride}
+                    alt=""
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
+                )}
+              </span>
+
+              {/* Meta */}
+              <span
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  gap: 'clamp(0.5rem, 1.5vw, 0.8rem)',
+                  padding: 'clamp(0.75rem, 2vw, 1.1rem) clamp(1rem, 2.5vw, 1.75rem)',
+                  minWidth: 0,
+                }}
+              >
+                <span className="label" style={{ color: 'var(--gray-400)' }}>{p.semester}</span>
+                <span
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontWeight: 700,
+                    fontSize: 'clamp(0.82rem, 1.7vw, 1.22rem)',
+                    letterSpacing: '-0.02em',
+                    textTransform: 'uppercase',
+                    lineHeight: 1.1,
+                  }}
+                >
+                  {p.title}
+                </span>
+
+                {/* Revealed on hover — collapsed to zero height otherwise */}
+                <span className="hero-directory-detail">
+                  <span
+                    style={{
+                      display: 'block',
+                      fontFamily: 'var(--font-mono)',
+                      fontWeight: 300,
+                      fontSize: 'clamp(0.62rem, 1.3vw, 0.72rem)',
+                      lineHeight: 1.8,
+                      color: 'var(--gray-500)',
+                      maxWidth: '46ch',
+                    }}
+                  >
+                    {p.shortDescription}
+                  </span>
+                  <span
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.6rem',
+                      marginTop: 'clamp(0.5rem, 1.2vw, 0.75rem)',
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: 'clamp(0.45rem, 0.95vw, 0.55rem)',
+                      letterSpacing: '0.18em',
+                      textTransform: 'uppercase',
+                      color: 'var(--beige-dark)',
+                    }}
+                  >
+                    View Project <span aria-hidden="true">→</span>
+                  </span>
+                </span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </nav>
+
       <style>{`
-        .hero-section {
-          grid-template-columns: 1fr 1fr;
+        /* Rows share the panel height evenly; hovering one steals the space
+           back from its siblings, so the index reads as a single accordion. */
+        .hero-directory-row {
+          display: grid;
+          align-items: stretch;
+          flex: 1 1 0;
+          min-height: clamp(72px, 9vh, 108px);
+          transition: flex-grow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                      background 0.3s ease;
         }
+        .hero-directory-detail {
+          display: block;
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          transform: translateY(6px);
+          transition: opacity 0.3s ease, max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                      transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hero-directory-thumb img {
+          transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @media (hover: hover) {
+          .hero-directory-row:hover {
+            flex-grow: 2.6;
+            background: var(--gray-50);
+          }
+          .hero-directory-row:hover .hero-directory-detail {
+            opacity: 1;
+            max-height: 10rem;
+            margin-top: clamp(0.4rem, 1vw, 0.6rem);
+            transform: translateY(0);
+          }
+          .hero-directory-row:hover .hero-directory-thumb img {
+            transform: scale(1.04);
+          }
+        }
+
+        /* Keyboard parity — tabbing the index expands the focused row too. */
+        .hero-directory-row:focus-visible {
+          flex-grow: 2.6;
+          background: var(--gray-50);
+          outline: 1px solid var(--black);
+          outline-offset: -1px;
+        }
+        .hero-directory-row:focus-visible .hero-directory-detail {
+          opacity: 1;
+          max-height: 10rem;
+          margin-top: clamp(0.4rem, 1vw, 0.6rem);
+          transform: translateY(0);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-directory-row,
+          .hero-directory-detail,
+          .hero-directory-thumb img {
+            transition: none;
+          }
+        }
+
         @media(max-width: 768px) {
           .hero-section {
             grid-template-columns: 1fr !important;
+            min-height: 0 !important;
           }
-          .hero-image-panel {
-            min-height: 60vh !important;
+          .hero-identity {
+            border-right: none !important;
+            border-bottom: 1px solid var(--black);
+            min-height: 72vh;
           }
-          .hero-vertical-label {
-            display: none;
+          .hero-directory-row {
+            grid-template-columns: clamp(24px, 6vw, 34px) minmax(0, 1fr) minmax(0, 1.2fr) !important;
+          }
+          /* No hover to trigger the accordion on touch — show the detail outright. */
+          .hero-directory-detail {
+            opacity: 1;
+            max-height: 12rem;
+            margin-top: 0.5rem;
+            transform: none;
           }
         }
       `}</style>
-    </>
+    </section>
   );
 }
