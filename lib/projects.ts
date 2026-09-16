@@ -365,5 +365,7 @@ The new proportioning system of my model came from the rearrangement of simplifi
   },
 ];
 
-export const COVER_PHOTO = `${BASE}/${enc('AYDENPETTIETTECOVERphoto.png')}`;
+// The 8308x9918 PNG original stays in the image repo as the archive copy;
+// the page never needs more than about 1600px of it.
+export const COVER_PHOTO = `${BASE}/${enc('AYDENPETTIETTECOVERphoto-web.jpg')}`;
 export const projectsSorted = [...projects].sort((a, b) => b.order - a.order);

@@ -149,6 +149,20 @@ export function Contact({ coverPhoto }: { coverPhoto: string }) {
             grid-template-columns: 1.1fr 1fr 0.85fr !important;
           }
         }
+        @media(max-width: 768px) {
+          /* The drawing is portrait. Beside the contact columns it is a band
+             cropped to fit, but stacked on a phone that band cuts the house
+             down to a sliver — so here the figure takes the whole drawing and
+             sizes itself to it. The black ground matches the paper, so the
+             letterboxing contain leaves is invisible. */
+          .contact-figure {
+            min-height: 0 !important;
+          }
+          .contact-figure img {
+            height: auto !important;
+            object-fit: contain !important;
+          }
+        }
       `}</style>
     </section>
   );
