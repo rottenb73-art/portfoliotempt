@@ -111,6 +111,9 @@ export type Project = {
   media: MediaItem[];
   wip?: boolean;
   coverOverride?: string;
+  // Still frame shown instantly behind coverOverride while the animated
+  // preview downloads, so a first visit is never a blank panel.
+  coverPoster?: string;
   titleImage?: string; // shown to the right of expanded description
   meta?: ProjectMeta;
   programLegend?: ProgramLegendEntry[];
@@ -149,6 +152,7 @@ export const projects: Project[] = [
       projectType: 'Mixed-Use Housing',
     },
     coverOverride: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/rotating midrise preview gif.gif')}`,
+    coverPoster: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/rotating midrise preview gif-poster.jpg')}`,
     // The four supporting sets share one row: they are what backs the project
     // up rather than what it is, and four separate bands of them buried the
     // drawings above.
@@ -212,6 +216,7 @@ export const projects: Project[] = [
       team: ['Blakely', 'Loe', 'Elkins'],
     },
     coverOverride: `${BASE}/${enc('BATH HOUSE, Fall 2025/bathhouse_animated.gif')}`,
+    coverPoster: `${BASE}/${enc('BATH HOUSE, Fall 2025/bathhouse_animated-poster.jpg')}`,
     media: [
       // 3 showcase panels shown side by side
       {
@@ -255,6 +260,7 @@ To start our design process we began abstract compositions using the defining li
 
 In contradiction to the downward pull of the floor, the roof is angled to pull space circulation and light up the slope. Our roof design is inspired by the Dancing Light House by Kendle Design Collaborative. However, our roof responds to our site and organizations of social to private spaces in the angles each roof plane is tilted. The roof towards the front is the highest tilted angle up while the lowest step has a less inclined roof. This allows for a better feeling of refuge in the private spaces and allows less cover and more light in the social spaces. The roof is supported by a few columns but mainly monolithic masses. The masses are meant to serve as geological and boulder-like in correlation to the surrounding volcanoes and mountains.`,
     coverOverride: `${BASE}/${enc('gif previews/translatedgif.gif')}`,
+    coverPoster: `${BASE}/${enc('gif previews/translatedgif-poster.jpg')}`,
     titleImage: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Riverside Full Model including neighbors (Next to project description maybe).jpg')}`,
     meta: {
       subtitle: 'Site-Responsive Housing on a Sloped Riverside Lot',
@@ -326,6 +332,7 @@ Despite this transgression of symmetry, the project is intentionally proportiona
 
 The new proportioning system of my model came from the rearrangement of simplified volumes that make up the massing. The lines that create these main volumes were then used as guiding lines for many elements.`,
     coverOverride: `${BASE}/${enc('gif previews/riversidegif.gif')}`,
+    coverPoster: `${BASE}/${enc('gif previews/riversidegif-poster.jpg')}`,
     titleImage: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/fall 2024 TITLE IMAGE.png')}`,
     meta: {
       subtitle: 'Repetition, Difference, and Juxtaposition in Spatial Hierarchy',

@@ -202,6 +202,15 @@ export function Hero({ projects }: HeroProps) {
                   overflow: 'hidden',
                   background: 'var(--gray-50)',
                   borderRight: '1px solid var(--gray-100)',
+                  // The still frame sits underneath the animated cover. The GIFs
+                  // run to tens of megabytes, so on a phone the panel used to
+                  // stay blank until one finished arriving; now it carries the
+                  // real image from the first paint and starts moving later.
+                  ...(p.coverPoster && {
+                    backgroundImage: `url("${p.coverPoster}")`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }),
                 }}
               >
                 {p.coverOverride && (
@@ -209,6 +218,8 @@ export function Hero({ projects }: HeroProps) {
                   <img
                     src={p.coverOverride}
                     alt=""
+                    loading="lazy"
+                    decoding="async"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                   />
                 )}
