@@ -158,10 +158,19 @@ export function Contact({ coverPhoto }: { coverPhoto: string }) {
              paper, so the letterboxing contain leaves is invisible. */
           .contact-figure {
             min-height: 0 !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: clamp(1rem, 4vw, 1.5rem) 0;
           }
           .contact-figure img {
+            /* Width auto as well as height, so the box hugs the drawing
+               instead of staying full width with the black ground padding it
+               out to the cap. */
+            width: auto !important;
             height: auto !important;
-            max-height: 60vh;
+            max-width: 100%;
+            max-height: 38vh;
             object-fit: contain !important;
           }
         }
