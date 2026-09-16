@@ -38,7 +38,7 @@ export function Contact({ coverPhoto }: { coverPhoto: string }) {
               lineHeight: 1,
               marginBottom: 'clamp(1.1rem, 2.2vw, 1.6rem)'
             }}>
-              GET_IN_TOUCH
+              GET IN TOUCH
             </h2>
             <p style={{
               fontFamily: 'var(--font-mono)',
@@ -48,8 +48,8 @@ export function Contact({ coverPhoto }: { coverPhoto: string }) {
               color: 'var(--gray-500)',
               maxWidth: '42ch'
             }}>
-              // seeking architecture internships and studio<br />
-              // collaboration — design, drawing, and model work.
+              // seeking internships · open for commissions<br />
+              // — drawing, rendering, and CAD modeling
             </p>
             <p style={{
               fontFamily: 'var(--font-mono)',

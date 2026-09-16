@@ -73,8 +73,8 @@ export function About() {
             }}>
               I am an architecture student at Texas A&amp;M University working across residential,
               civic, and mixed-use programs. My studio work engages threshold, material honesty,
-              and the social dimensions of building — carried from abstract drawing studies through
-              site analysis and sectional models into resolved technical drawings.
+              and the social dimensions of building — carried from abstract geometrical studies
+              and technical construction methods.
             </p>
             <p style={{
               fontFamily: 'var(--font-mono)',
@@ -85,10 +85,10 @@ export function About() {
               maxWidth: '52ch',
               marginTop: 'clamp(1rem, 2.5vw, 1.5rem)'
             }}>
-              In 2025 I interned at Macro Design Studio in San Antonio, following projects from
-              client meeting through construction. I developed techniques for hand-drawn diagrams,
-              sections, plans, and perspectives, worked through studio critique, and visited active
-              construction sites to understand how a drawing becomes structure.
+              My studies emphasize design that is calculated rather than discovered, space
+              organized by function and experience, and structure built from tangible materials.
+              Professionally I have followed projects from client to construction and learned the
+              efficiency exceptional work requires.
             </p>
             <p style={{
               fontFamily: 'var(--font-mono)',
