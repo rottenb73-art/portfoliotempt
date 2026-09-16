@@ -113,7 +113,7 @@ export function About() {
                 ['□', 'MEDIA', 'Hand Drawing · Physical Model · Render'],
                 ['×', 'FOCUS', 'Site Analysis · Space Planning · Sustainable Design'],
               ].map(([symbol, k, v]) => (
-                <div key={k} style={{
+                <div key={k} className="about-row" style={{
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'baseline',
@@ -125,7 +125,7 @@ export function About() {
                   <span className="label" style={{ color: 'var(--gray-300)', flexShrink: 0 }}>
                     <span style={{ color: 'var(--gray-700)', marginRight: '0.6rem' }}>{symbol}</span>{k}
                   </span>
-                  <span style={{
+                  <span className="about-row-value" style={{
                     fontFamily: 'var(--font-mono)',
                     fontSize: 'clamp(0.65rem, 1.4vw, 0.75rem)',
                     color: 'var(--white)',
@@ -142,6 +142,16 @@ export function About() {
         @media(min-width: 769px) {
           .about-grid {
             grid-template-columns: 1fr 1fr !important;
+          }
+        }
+        @media(max-width: 768px) {
+          .about-row {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.35rem !important;
+          }
+          .about-row-value {
+            text-align: left !important;
           }
         }
       `}</style>
