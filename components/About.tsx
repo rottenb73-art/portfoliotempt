@@ -109,7 +109,7 @@ export function About() {
                 ['○', 'INSTITUTION', 'Texas A&M University'],
                 ['□', 'PROGRAM', 'Bachelor of Science in Architecture'],
                 ['×', 'GRADUATING', 'May 2028'],
-                ['○', 'SOFTWARE', 'Rhino · AutoCAD · Revit · Illustrator · Photoshop'],
+                ['○', 'SOFTWARE', 'Rhino · Grasshopper · AutoCAD · Revit · Illustrator · Photoshop'],
                 ['□', 'MEDIA', 'Hand Drawing · Physical Model · Render'],
                 ['×', 'FOCUS', 'Site Analysis · Space Planning · Sustainable Design'],
               ].map(([symbol, k, v]) => (
