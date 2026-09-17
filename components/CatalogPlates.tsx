@@ -99,6 +99,7 @@ export function CatalogPlates({
   onOpen,
   plateLayouts,
   plateGroups,
+  hideCaptions,
 }: {
   images: MediaItem[];
   onOpen: (index: number) => void;
@@ -106,6 +107,8 @@ export function CatalogPlates({
   plateLayouts?: Record<string, PlateLayout>;
   /** Categories to draw as one shared row; the rest keep a row each. */
   plateGroups?: PlateGroup[];
+  /** Keep the figure captions hidden instead of fading them in on hover. */
+  hideCaptions?: boolean;
 }) {
   const categories: string[] = [];
   const byCategory: Record<string, { item: MediaItem; index: number }[]> = {};
@@ -324,7 +327,7 @@ export function CatalogPlates({
           and every plate visible. Hovering a row only lifts its plates and
           brings up their captions — nothing opens, nothing reflows. */}
       {rowSets.length > 0 && (
-        <div className="plate-stage">
+        <div className="plate-stage" data-captions={hideCaptions ? 'off' : undefined}>
           {stageRows.map((entry) => {
             // A grouped row: the member sets become labelled clusters sharing
             // one band. Each cluster is weighted by how many columns its own
@@ -335,7 +338,11 @@ export function CatalogPlates({
               const clusters = cats.map((cat) => ({
                 cat,
                 items: byCategory[cat],
-                cols: Math.min(byCategory[cat].length, GROUP_MAX_COLS),
+                // `singleRow` takes the cap off: the set gets a column per
+                // plate, so it runs as one row instead of wrapping.
+                cols: group.singleRow
+                  ? byCategory[cat].length
+                  : Math.min(byCategory[cat].length, GROUP_MAX_COLS),
               }));
               return (
                 <section key={entry.key} className="plate-row">
@@ -366,8 +373,13 @@ export function CatalogPlates({
                               columnGap: 'clamp(0.75rem, 1.6vw, 1.1rem)',
                               rowGap: 'clamp(1rem, 2vw, 1.4rem)',
                               ['--cols' as string]: cols,
-                              ['--cols-md' as string]: cols,
-                              ['--cols-sm' as string]: cols,
+                              // A capped cluster is already at two columns and
+                              // stays there. A single-row one has as many as
+                              // it has plates, which is past legibility on a
+                              // narrow screen, so it steps down like any other
+                              // set rather than holding the row.
+                              ['--cols-md' as string]: group.singleRow ? Math.min(cols, 3) : cols,
+                              ['--cols-sm' as string]: group.singleRow ? Math.min(cols, 2) : cols,
                             } as React.CSSProperties}
                           >
                             {buildPlates(cat, false)}
@@ -473,6 +485,17 @@ export function CatalogPlates({
         }
         .plate-row:focus-within { background: var(--gray-50); }
         .plate-row:focus-within .plate-caption { opacity: 1; }
+
+        /* Captions off: the caption keeps its space so the rows sit exactly
+           where they did, but nothing brings it up — not hover, not focus,
+           and not the touch breakpoint further down that otherwise leaves
+           captions permanently on. Specificity does that last part, so these
+           hold wherever they sit in the sheet. */
+        .plate-stage[data-captions='off'] .plate-caption,
+        .plate-stage[data-captions='off'] .plate-row:hover .plate-caption,
+        .plate-stage[data-captions='off'] .plate-row:focus-within .plate-caption {
+          opacity: 0;
+        }
 
         @media (prefers-reduced-motion: reduce) {
           .plate-row,

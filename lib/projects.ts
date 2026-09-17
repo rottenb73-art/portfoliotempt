@@ -60,7 +60,15 @@ export type PlateLayout = { columns: string; areas: string; span?: string };
  * `title` is optional; without one the cluster labels carry the row on their
  * own, which is enough when the categories name themselves.
  */
-export type PlateGroup = { title?: string; categories: string[] };
+export type PlateGroup = {
+  title?: string;
+  categories: string[];
+  // Run each member set as a single row of its own plates instead of capping
+  // it at two columns and letting it wrap. The band stays weighted by those
+  // counts, so every plate across it still lands the same size — but the
+  // more the sets hold between them, the smaller that size is.
+  singleRow?: boolean;
+};
 
 // Numbered program legend for a project's plans/sections/axons. Render the
 // codes unobtrusively inside the drawing (Illustrator-side) and list them
@@ -125,6 +133,11 @@ export type Project = {
   // Categories to draw as one row instead of one row each. A category not
   // named here keeps its own row.
   plateGroups?: PlateGroup[];
+  // Suppress the figure captions under the plates, which otherwise fade in
+  // when their row is hovered. The drawings carry this project on their own
+  // and the titles were reading as clutter over them. The plate button keeps
+  // its aria-label either way, so the figures stay named to a screen reader.
+  hideCaptions?: boolean;
 };
 
 const INSTITUTION = 'Texas A&M University';
@@ -148,6 +161,7 @@ export const projects: Project[] = [
       subtitle: 'Mixed-Use Housing + Urban Density',
       institution: INSTITUTION,
       degreePlan: DEGREE_PLAN,
+      faculty: 'Mostafa Akbari · Texas A&M',
       location: 'Austin, Texas',
       projectType: 'Mixed-Use Housing',
       team: ['Jace Blakely'],
@@ -219,6 +233,8 @@ export const projects: Project[] = [
       subtitle: 'A Modern Public Bathhouse',
       institution: INSTITUTION,
       degreePlan: DEGREE_PLAN,
+      faculty: 'Irem Sezer · Texas A&M',
+      location: 'Trinity River, Dallas, Texas',
       projectType: 'Public / Civic Building',
       workType: 'Team of 4',
       team: ['Avery Elkins', 'Jace Blakely', 'Anna Loe'],
@@ -257,10 +273,15 @@ export const projects: Project[] = [
   {
     id: 'riverside-residential',
     title: 'Riverside Residential',
+    hideCaptions: true,
     semester: 'Spring 2025',
     year: 2025,
     season: 'Spring',
     order: 2,
+    // The drawings and the drawing progression share one band at the foot of
+    // the page, the same trade Mid Rise makes: two tall stacks of plates read
+    // as one closing spread rather than two more bands after the models.
+    plateGroups: [{ categories: ['Elevations and Plan', 'Abstract Drawing Progression'], singleRow: true }],
     shortDescription: 'Riverside single family houses that respond to the environment, site, and neighboring houses.',
     longDescription: `When tasked with developing a building to respond to a set site and environment it is essential to research. Our site in Sunriver, Oregon had many crucial factors to consider before developing a house. The climate, environment, and topography became our focus in our research. The area experiences a low amount of precipitation due to it being located in the rain shadow of surrounding mountains. This caused us to really take into consideration elements like a roof to respond to the climate. The area sits on a high desert plateau and our site has two rivers west of the property. With no budget, these site conditions asked us to think creatively throughout our design process.
 
@@ -274,6 +295,7 @@ In contradiction to the downward pull of the floor, the roof is angled to pull s
       subtitle: 'Site-Responsive Housing on a Sloped Riverside Lot',
       institution: INSTITUTION,
       degreePlan: DEGREE_PLAN,
+      faculty: 'Hans Steffes · Texas A&M',
       location: 'Sunriver, Oregon',
       projectType: 'Single-Family Residential',
       workType: 'Team',
@@ -287,7 +309,7 @@ In contradiction to the downward pull of the floor, the roof is angled to pull s
       // Section 02 + House Graphic displayed side by side
       // Sections — both section sheets read together: 02 came out of the wall
       // set, 01 out of the elevations.
-      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Sections-02.png')}`, alt: 'Section 02', category: 'Sections', title: 'Building Section — Riverside Descent', description: 'The building steps down the riverside slope in three layers, placing shared social space at the highest level and private space nearest the river below.' },
+      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Sections-02.png')}`, alt: 'Section 00', category: 'Sections', description: 'The building steps down the riverside slope in three layers, placing shared social space at the highest level and private space nearest the river below.' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Sections-01.png')}`, alt: 'Section 01', category: 'Sections' },
       // The graphic keeps the full-bleed wall treatment on its own.
       // The sheet is 6267x2416 and its top 1032 rows (42.7%) are blank white;
@@ -299,17 +321,13 @@ In contradiction to the downward pull of the floor, the roof is angled to pull s
       // deliberately not here; the set is these four.
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/House Model Pics/riversidehousemod1.jpg')}`, alt: 'House Model — View 1', category: 'Model' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/House Model Pics/riversidehousemod2.jpg')}`, alt: 'House Model — View 2', category: 'Model' },
-      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/House Model Pics/riversidehousemod5.jpg')}`, alt: 'House Model — View 5', category: 'Model' },
+      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/House Model Pics/riversidehousemod5.jpg')}`, alt: 'House Model — View 3', category: 'Model' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Chunk Model Pics/riversidechunkmod4.jpg')}`, alt: 'Sectional Model — View 4', category: 'Model' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Front Elevation.jpg')}`, alt: 'Front Elevation', category: 'Elevations and Plan', description: "The roof's steepest pitch occurs above the highest, most public level, pulling light and circulation up the slope; the angle relaxes toward the lower, more private levels." },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Back elevation.jpg')}`, alt: 'Back Elevation', category: 'Elevations and Plan' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Left elevation.jpg')}`, alt: 'Left Elevation', category: 'Elevations and Plan' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Right elevation.jpg')}`, alt: 'Right Elevation', category: 'Elevations and Plan' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Drawings/Plan.jpg')}`, alt: 'Floor Plan', category: 'Elevations and Plan', description: "Massing and circulation carry forward the project's abstract drawing studies — extruded shapes and monolithic, boulder-like supporting elements informed by the surrounding volcanic terrain." },
-      // Site Model Pics
-      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Site Model Pics/riversidemodelview1.jpg')}`, alt: 'Site Model — View 1', category: 'Site Model' },
-      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Site Model Pics/riversidemodelview2.jpg')}`, alt: 'Site Model — View 2', category: 'Site Model' },
-      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Site Model Pics/riversidemodelview3.jpg')}`, alt: 'Site Model — View 3', category: 'Site Model' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Abstract Drawing Progression/ViewCaptureFront.png')}`, alt: 'View Capture — Front', category: 'Abstract Drawing Progression', title: 'Digital Massing Study — Front View' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Abstract Drawing Progression/ViewCaptureLeft.png')}`, alt: 'View Capture — Left', category: 'Abstract Drawing Progression', title: 'Digital Massing Study — Left View' },
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/Abstract Drawing Progression/ViewCaptureRight.png')}`, alt: 'View Capture — Right', category: 'Abstract Drawing Progression', title: 'Digital Massing Study — Right View' },
@@ -321,13 +339,14 @@ In contradiction to the downward pull of the floor, the roof is angled to pull s
   {
     id: 'translation-of-space',
     title: 'Translation of Space',
+    hideCaptions: true,
     semester: 'Fall 2024',
     year: 2024,
     season: 'Fall',
     order: 1,
     // The two study sets share one row at the foot of the page, the same
     // trade Mid Rise makes: these back the project up rather than being it.
-    plateGroups: [{ categories: ['Abstract Drawings', 'Process Studies'] }],
+    plateGroups: [{ categories: ['Abstract Drawings', 'Process Studies'], singleRow: true }],
     shortDescription: 'Development of three spaces maintaining hierarchical order.',
     longDescription: `The project addresses the challenge of forming 3 hierarchical spaces by using a variety of carefully incorporated elements. Through this analysis of these elements, three internal logics are revealed; repetition, difference, and juxtaposition.
 
@@ -347,6 +366,7 @@ The new proportioning system of my model came from the rearrangement of simplifi
       subtitle: 'Repetition, Difference, and Juxtaposition in Spatial Hierarchy',
       institution: INSTITUTION,
       degreePlan: DEGREE_PLAN,
+      faculty: 'Hans Steffes · Texas A&M',
       projectType: 'Formal / Spatial Study',
       workType: 'Individual',
       brief: 'This project develops three hierarchical spaces from a single generative logic of repetition, difference, and juxtaposition. A repeating pattern of solids and gaps — proportioned from an earlier drawing exercise — organizes an angled primary geometry, while a reversed, negatively sloped volume juxtaposes that same rhythm in negative space. The massing originated from a series of vertical, horizontal, and 45-degree drawings whose grid recalls the Geisel Library by William Pereira, though the angled lines intentionally break the library’s symmetry. Despite this departure, the project maintains an abstract, self-referential proportioning system carried through from drawing into three-dimensional volume.',

@@ -186,6 +186,7 @@ export function ProjectPageClient({
           onOpen={setLightboxIndex}
           plateLayouts={project.plateLayouts}
           plateGroups={project.plateGroups}
+          hideCaptions={project.hideCaptions}
         />
       )}
 
