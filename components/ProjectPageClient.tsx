@@ -108,8 +108,8 @@ export function ProjectPageClient({
                   <p style={{
                     fontFamily: 'var(--font-prose)',
                     fontWeight: 400,
-                    fontSize: 'clamp(0.8rem, 1.55vw, 0.92rem)',
-                    lineHeight: 1.65,
+                    fontSize: 'clamp(0.72rem, 1.35vw, 0.82rem)',
+                    lineHeight: 1.6,
                     color: 'var(--gray-700)',
                     maxWidth: '68ch',
                   }}>

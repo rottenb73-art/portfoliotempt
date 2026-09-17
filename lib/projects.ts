@@ -150,7 +150,15 @@ export const projects: Project[] = [
       degreePlan: DEGREE_PLAN,
       location: 'Austin, Texas',
       projectType: 'Mixed-Use Housing',
+      team: ['Jace Blakely'],
+      brief: 'Within the density of Austin, this project poses a juxtaposition to the uniform confines of the condensed, boxed residential housing of the surrounding city. The form of this structure is defined by forceful movement, as if a rigid, concrete body resting in the center of the site enacted an internal combustion that pushed each residential unit outward to the extents of the plot. The centrifugal force and shifting of these residential fragments open new opportunities between the fragments’ cracks and give rise to dramatic cantilevers. These “void” spaces discovered within these modular, fragmented units create dynamic exterior spaces. Courtyards, terraces, and balconies now become a frequent experience for each resident to connect with the outdoors and escape the urban density of Austin. These apartment units maintain the square plans familiar to most residents while lying perpendicular to the circumference of a circular, exterior organization. Terraces, bridges, and tunnels respond to the circular courtyard while connecting through every layer of this mid-rise structure. This development allows for ADA accessibility and unique yet intelligible circulation. The Mid Rise Complex offers a solution to the confining, uniform apartment typology of Austin by turning the structure inside out.',
     },
+    finalReviewNotes: [
+      { note: 'Presentation of drawings far exceed expectations for second year studio' },
+      { note: 'Well balanced blend of chaos and function' },
+      { note: 'Could benefit from increased fragmentation and movement' },
+      { note: 'Pink display to grey concrete is conflicting, could benefit from a broader diversity of material' },
+    ],
     coverOverride: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/rotating midrise preview gif.gif')}`,
     coverPoster: `${BASE}/${enc('MID RISE COMPLEX, Spring 2026/rotating midrise preview gif-poster.jpg')}`,
     // The four supporting sets share one row: they are what backs the project
