@@ -221,7 +221,7 @@ export const projects: Project[] = [
       degreePlan: DEGREE_PLAN,
       projectType: 'Public / Civic Building',
       workType: 'Team of 4',
-      team: ['Blakely', 'Loe', 'Elkins'],
+      team: ['Avery Elkins', 'Jace Blakely', 'Anna Loe'],
     },
     coverOverride: `${BASE}/${enc('BATH HOUSE, Fall 2025/bathhouse_animated.gif')}`,
     coverPoster: `${BASE}/${enc('BATH HOUSE, Fall 2025/bathhouse_animated-poster.jpg')}`,
@@ -277,6 +277,7 @@ In contradiction to the downward pull of the floor, the roof is angled to pull s
       location: 'Sunriver, Oregon',
       projectType: 'Single-Family Residential',
       workType: 'Team',
+      team: ['Jett Parris', 'Kendall Miller', 'Jace Blakely'],
       brief: 'Sited on a sloped riverside lot in Sunriver, Oregon, this single-family residence responds to a high-desert climate, two adjacent rivers, and a team-developed formal language derived from abstracted airport compositions. The house steps down the slope in three layers, moving from public social space at the top to private space near the river below. An angled roof — inspired by the Dancing Light House — pulls light and circulation up the incline, tilted most steeply at the social spaces and shallow at the private ones. Monolithic, boulder-like masses anchor the section, echoing the volcanic terrain beyond the site.',
     },
     finalReviewNotes: [
