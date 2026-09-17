@@ -7,6 +7,10 @@ const CHANNELS = [
   { symbol: '×', label: 'PHONE', value: '(210) 303-3729', href: 'tel:2103033729' },
   { symbol: '○', label: 'LINKEDIN', value: 'linkedin.com/in/ayden-pettiette', href: 'https://www.linkedin.com/in/ayden-pettiette-0b893a223/' },
   { symbol: '□', label: 'BASED IN', value: 'College Station, TX', href: null },
+  // Served straight out of `public/`, so the link is the file. `download`
+  // saves it rather than handing it to the browser's PDF viewer, which is
+  // what someone clicking a resume is after.
+  { symbol: '×', label: 'RESUME', value: 'AydenPettietteResume.pdf', href: '/AydenPettietteResume.pdf', download: true },
 ];
 
 export function Contact({ coverPhoto }: { coverPhoto: string }) {
@@ -73,7 +77,7 @@ export function Contact({ coverPhoto }: { coverPhoto: string }) {
             justifyContent: 'center',
             height: '100%'
           }}>
-            {CHANNELS.map(({ symbol, label, value, href }) => (
+            {CHANNELS.map(({ symbol, label, value, href, download }) => (
               <div key={label} style={{
                 borderBottom: '1px solid var(--gray-100)',
                 padding: 'clamp(0.65rem, 1.5vw, 0.9rem) 0'
@@ -82,7 +86,7 @@ export function Contact({ coverPhoto }: { coverPhoto: string }) {
                   <span style={{ color: 'var(--gray-200)', marginRight: '0.6rem' }}>{symbol}</span>{label}
                 </div>
                 {href ? (
-                  <a href={href} data-hover style={{
+                  <a href={href} {...(download ? { download: '' } : {})} data-hover style={{
                     fontFamily: 'var(--font-mono)',
                     fontWeight: 400,
                     fontSize: 'clamp(0.7rem, 1.6vw, 0.8rem)',
