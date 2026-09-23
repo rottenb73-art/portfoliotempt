@@ -291,9 +291,9 @@ export const projects: Project[] = [
     // The exploded programme diagram joins the graphic on the top band. The
     // graphic is a long horizontal sheet and the diagram a tall portrait one,
     // so equal columns would let the diagram run three times the height of
-    // the band: 3:1 holds the graphic at close to the width it had alone and
-    // gives the diagram a column it is still readable in.
-    wallLayouts: { Graphic: '3fr 1fr' },
+    // the band: 4:1 holds the graphic at close to the width it had alone and
+    // keeps the diagram's column narrow enough not to tower over it.
+    wallLayouts: { Graphic: '4fr 1fr' },
     shortDescription: 'Riverside single family houses that respond to the environment, site, and neighboring houses.',
     longDescription: `When tasked with developing a building to respond to a set site and environment it is essential to research. Our site in Sunriver, Oregon had many crucial factors to consider before developing a house. The climate, environment, and topography became our focus in our research. The area experiences a low amount of precipitation due to it being located in the rain shadow of surrounding mountains. This caused us to really take into consideration elements like a roof to respond to the climate. The area sits on a high desert plateau and our site has two rivers west of the property. With no budget, these site conditions asked us to think creatively throughout our design process.
 
