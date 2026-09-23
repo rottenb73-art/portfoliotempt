@@ -130,6 +130,12 @@ export type Project = {
   // Compositions by category name. A category with no entry here is laid out
   // as an even row, which is still the case for all but one set.
   plateLayouts?: Record<string, PlateLayout>;
+  // Wall sets only: the grid tracks for one category's panels, in place of the
+  // even row of equal columns. Two sheets of very different proportion cannot
+  // share equal columns — a tall sheet beside a long one takes the whole band
+  // — so the weighting is stated here. A wall category with no entry keeps the
+  // even, gapless row the presentation boards want.
+  wallLayouts?: Record<string, string>;
   // Categories to draw as one row instead of one row each. A category not
   // named here keeps its own row.
   plateGroups?: PlateGroup[];
@@ -282,6 +288,12 @@ export const projects: Project[] = [
     // the page, the same trade Mid Rise makes: two tall stacks of plates read
     // as one closing spread rather than two more bands after the models.
     plateGroups: [{ categories: ['Elevations and Plan', 'Abstract Drawing Progression'], singleRow: true }],
+    // The exploded programme diagram joins the graphic on the top band. The
+    // graphic is a long horizontal sheet and the diagram a tall portrait one,
+    // so equal columns would let the diagram run three times the height of
+    // the band: 3:1 holds the graphic at close to the width it had alone and
+    // gives the diagram a column it is still readable in.
+    wallLayouts: { Graphic: '3fr 1fr' },
     shortDescription: 'Riverside single family houses that respond to the environment, site, and neighboring houses.',
     longDescription: `When tasked with developing a building to respond to a set site and environment it is essential to research. Our site in Sunriver, Oregon had many crucial factors to consider before developing a house. The climate, environment, and topography became our focus in our research. The area experiences a low amount of precipitation due to it being located in the rain shadow of surrounding mountains. This caused us to really take into consideration elements like a roof to respond to the climate. The area sits on a high desert plateau and our site has two rivers west of the property. With no budget, these site conditions asked us to think creatively throughout our design process.
 
@@ -316,6 +328,7 @@ In contradiction to the downward pull of the floor, the roof is angled to pull s
       // the drawing runs from there to the bottom edge. 0.42 takes the blank
       // band and stops just short of the ink.
       { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/riversidehousegraphic.jpg')}`, alt: 'House Graphic', category: 'Graphic', cropTop: 0.42, maxWidth: '72rem' },
+      { type: 'image', src: `${BASE}/${enc('RIVERSIDE RESIDENTIAL, Spring 2025/diagram/Program Exploded.jpg')}`, alt: 'Program Exploded Axonometric', title: 'Exploded Program Axonometric', category: 'Graphic' },
       // Model — house views 1, 2 and 5 with the fourth sectional view. The
       // other two house views and the first three sectional views are
       // deliberately not here; the set is these four.

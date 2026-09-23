@@ -185,6 +185,7 @@ export function ProjectPageClient({
           images={images}
           onOpen={setLightboxIndex}
           plateLayouts={project.plateLayouts}
+          wallLayouts={project.wallLayouts}
           plateGroups={project.plateGroups}
           hideCaptions={project.hideCaptions}
         />

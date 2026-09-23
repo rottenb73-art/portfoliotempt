@@ -98,6 +98,7 @@ export function CatalogPlates({
   images,
   onOpen,
   plateLayouts,
+  wallLayouts,
   plateGroups,
   hideCaptions,
 }: {
@@ -105,6 +106,8 @@ export function CatalogPlates({
   onOpen: (index: number) => void;
   /** Compositions by category name; a category without one keeps the even row. */
   plateLayouts?: Record<string, PlateLayout>;
+  /** Grid tracks for a wall category; one without an entry keeps equal columns. */
+  wallLayouts?: Record<string, string>;
   /** Categories to draw as one shared row; the rest keep a row each. */
   plateGroups?: PlateGroup[];
   /** Keep the figure captions hidden instead of fading them in on hover. */
@@ -300,27 +303,35 @@ export function CatalogPlates({
           the sheets a reader opens the page on, and a label over them only
           names what the drawing already says. The stage sets below keep their
           heads — they are groups a reader needs told apart. */}
-      {wallSets.map(({ cat }) => (
-        <section
-          key={cat}
-          style={{
-            paddingTop: 'clamp(2.75rem, 5.5vw, 4rem)',
-            paddingBottom: 'clamp(2.75rem, 5.5vw, 4rem)',
-          }}
-        >
-          <div
-            className="plate-wall"
+      {wallSets.map(({ cat }) => {
+        // A weighted set is not a run of boards read across: it is sheets of
+        // different proportion set beside each other, so it takes the page's
+        // own margins and a gap, and centres each sheet against the tallest
+        // rather than hanging them all from the top edge.
+        const wall = wallLayouts?.[cat];
+        return (
+          <section
+            key={cat}
             style={{
-              display: 'grid',
-              gridTemplateColumns: `repeat(${byCategory[cat].length}, minmax(0, 1fr))`,
-              gap: 0,
-              alignItems: 'stretch',
+              paddingTop: 'clamp(2.75rem, 5.5vw, 4rem)',
+              paddingBottom: 'clamp(2.75rem, 5.5vw, 4rem)',
             }}
           >
-            {buildPlates(cat, true)}
-          </div>
-        </section>
-      ))}
+            <div
+              className="plate-wall"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: wall ?? `repeat(${byCategory[cat].length}, minmax(0, 1fr))`,
+                gap: wall ? 'clamp(1.5rem, 3vw, 2.5rem)' : 0,
+                alignItems: wall ? 'center' : 'stretch',
+                ...(wall ? { padding: PAGE_PAD } : {}),
+              }}
+            >
+              {buildPlates(cat, true)}
+            </div>
+          </section>
+        );
+      })}
 
       {/* ── STAGE ─────────────────────────────────────────────────
           The documentation sets run down the page as rows, every set open
