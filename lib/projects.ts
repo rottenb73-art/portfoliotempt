@@ -244,7 +244,14 @@ export const projects: Project[] = [
       projectType: 'Public / Civic Building',
       workType: 'Team of 4',
       team: ['Avery Elkins', 'Jace Blakely', 'Anna Loe'],
+      brief: 'Historically, the bathhouse was a civic space for collective bathing, relaxation, and social exchange. These communal places of refuge offered saunas, hydrotherapy, and contemplative courtyards. To adapt the bathhouse to function today, we created a multilevel facility with pools at a range of temperatures, along with public and private spaces. The defining geometry comes from intersecting blocks set over a grid that hooks the massings together. The elevation and function of each space also respond to the slope and to the Trinity River, which runs alongside the building.',
     },
+    finalReviewNotes: [
+      { note: 'Presentation and panels communicate effectively' },
+      { note: 'The balance of indoor to outdoor space creates a unique experience and circulation of people' },
+      { note: 'Drawings could benefit from a wider range of line weights and more conflicting colors' },
+      { note: 'Drawing legibility could benefit by utilizing a key or legend' },
+    ],
     coverOverride: `${BASE}/${enc('BATH HOUSE, Fall 2025/bathhouse_animated.gif')}`,
     coverPoster: `${BASE}/${enc('BATH HOUSE, Fall 2025/bathhouse_animated-poster.jpg')}`,
     media: [
@@ -315,6 +322,9 @@ In contradiction to the downward pull of the floor, the roof is angled to pull s
       brief: 'Sited on a sloped riverside lot in Sunriver, Oregon, this single-family residence responds to a high-desert climate, two adjacent rivers, and a team-developed formal language derived from abstracted airport compositions. The house steps down the slope in three layers, moving from public social space at the top to private space near the river below. An angled roof — inspired by the Dancing Light House — pulls light and circulation up the incline, tilted most steeply at the social spaces and shallow at the private ones. Monolithic, boulder-like masses anchor the section, echoing the volcanic terrain beyond the site.',
     },
     finalReviewNotes: [
+      { note: 'Plan is too noticeably an extrusion of the geometrical studies' },
+      { note: 'Moments of the artifact appear more random than calculated and precise' },
+      { note: 'Response to site conditions, especially in the angles of the roof, is cause for excitement' },
       { note: '“How do I say… schizophrenic nightmare”', by: 'David Jimenez Iniesta · Texas A&M' },
     ],
     media: [
@@ -384,6 +394,10 @@ The new proportioning system of my model came from the rearrangement of simplifi
       workType: 'Individual',
       brief: 'This project develops three hierarchical spaces from a single generative logic of repetition, difference, and juxtaposition. A repeating pattern of solids and gaps — proportioned from an earlier drawing exercise — organizes an angled primary geometry, while a reversed, negatively sloped volume juxtaposes that same rhythm in negative space. The massing originated from a series of vertical, horizontal, and 45-degree drawings whose grid recalls the Geisel Library by William Pereira, though the angled lines intentionally break the library’s symmetry. Despite this departure, the project maintains an abstract, self-referential proportioning system carried through from drawing into three-dimensional volume.',
     },
+    finalReviewNotes: [
+      { note: 'One sided - one side is far more exciting than the other' },
+      { note: 'The building delivers a near perfect translation of the abstract drawing studies' },
+    ],
     media: [
       // Model Views first
       { type: 'image', src: `${BASE}/${enc('TRANSLATION OF SPACE, Fall 2024/Model Views/FP1.png')}`, alt: 'Model View 1', category: 'Model Views', title: 'Primary Massing Study', description: "The model's primary mass is generated from a grid of vertical, horizontal, and 45-degree lines, producing a repeating rhythm of solid and gap that establishes the project's three hierarchical spaces." },
