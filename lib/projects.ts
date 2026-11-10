@@ -325,7 +325,6 @@ In contradiction to the downward pull of the floor, the roof is angled to pull s
       { note: 'Plan is too noticeably an extrusion of the geometrical studies' },
       { note: 'Moments of the artifact appear more random than calculated and precise' },
       { note: 'Response to site conditions, especially in the angles of the roof, is cause for excitement' },
-      { note: '“How do I say… schizophrenic nightmare”', by: 'David Jimenez Iniesta · Texas A&M' },
     ],
     media: [
       // Section 02 + House Graphic displayed side by side
